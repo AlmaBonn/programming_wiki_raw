@@ -3,9 +3,9 @@
 Folgen Sie den Anweisungen für Linux, Windows oder macOS auf der
 [Arduino IDE 2 Download-Seite](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/).
 
-# Erste Schritte
+# Erste Schritte nach der Installation
 
-1. Verbinden Sie den Mikrochip über einen USB-Port mit Ihrem Gerät.
+1. Verbinden Sie den Arduino über einen USB-Port mit Ihrem Gerät.
 
 2. In der Arduino IDE drücken Sie auf `Select Board`.
    Dort sollte nun `Arduino Leonardo` zur Auswahl stehen.
@@ -15,13 +15,14 @@ Folgen Sie den Anweisungen für Linux, Windows oder macOS auf der
    `File > Examples > 01.Basics > Blink`
    für ein Testprogramm.
 
-4. Drücken Sie auf `Upload`.
+4. Drücken Sie auf `Upload`, um das Programm zu kompilieren und auf den Arduino
+   zu laden.
    Die Lampe am Arduino sollte nun in 1-Sekunden-Abständen blinken.
-   Ist dies nicht der Fall, bearbeiten Sie eventuelle Fehlermeldungen im
-   Output-Fenster.
+   Ist dies nicht der Fall, bietet eine eventuelle Fehlermeldungen im
+   Output-Fenster einen Ansatzpunkt zur Fehlerbehebung.
 
 # Probleme und Lösungen
 Probleme beim Einrichten der Arduinos und der IDE sowie passende Lösungen
-sammeln wir in der folgenden Liste
+sammeln wir in der folgenden Liste.
 
 -
