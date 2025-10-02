@@ -71,6 +71,18 @@ Für weitere Informationen empfehlen wir den
 1. Erster Schritt
 2. Zweiter Schritt
 
+- Um eine Sektion des Wikis zu verlinken wird zunächst in eckigen Klammern der
+  Link-Text festgelegt, der blau unterlegt erscheint. Dahinter wird in runden
+  Klammern der Name der Datei ohne Datei-Endung angegeben, gefolgt von `#` und
+  dem Namen der Sektion in Kleinbuchstaben.
+
+      [Anleitung](Zum-Wiki-Beitragen#setup)
+
+  wird zu
+
+  [Anleitung](Zum-Wiki-Beitragen#setup)
+
+
 - Um Wörter hervorzuheben, zum Beispiel Code oder Felder auf einer Webseite,
   kann das Wort mit `` ` `` eingeklammert werden.
 
