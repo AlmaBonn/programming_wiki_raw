@@ -24,7 +24,7 @@ Folgen Sie den Anweisungen für Linux, Windows oder macOS auf der
 # Beispiel für Ausgangscode
 Wenn Sie Code schreiben, implementieren Sie diesen in der `run`-Funktion in
 dem untenstehenden Code. Sie dürfen natürlich gerne in der Funktion `run`
-weitere von Ihnen implementierten Funktion aufrufen, aber implementieren Sie
+weitere von Ihnen implementierte Funktionen aufrufen, aber implementieren Sie
 unter keinen Umständen eine eigene `main`-Funktion!
 > [!CAUTION]
 > Bitte beachten Sie auch unsere Hinweise unter auf dieser

@@ -1,10 +1,10 @@
-Bei der Verwendung der Mikrochips gibt es fehlerhaften Code, der dazu führen
-kann, dass die Mikrochips dauerhaft nicht mehr funktionieren.
-Achten Sie bitte darauf solchen Code nicht auszuführen!
+Es gibt Programmierfehler, die dazu führen
+können, dass die Mikrochips dauerhaft nicht mehr funktionieren.
+Achten Sie bitte darauf diese Fehler zu vermeiden!
 
 ## Überschreiben der Main-Funktion
 
-Wie sie wahrscheinlich wissen hat jedes C-Programm eine main-Funktion.
+Wie Sie wahrscheinlich wissen hat jedes C-Programm eine main-Funktion.
 Auf den Mikrochips dürfen wir aber unter keinen Umständen eine main-Funktion
 implementieren, da diese bereits intern vorliegt und das Überschreiben dieser
 main-Funktion mit einer eigenen main-Funktion dazu führen kann, dass der
