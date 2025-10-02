@@ -32,10 +32,12 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
 7. Tragen Sie zunächst eine Commit-Message ein, die die vorgenommenen Änderungen
    knapp und präzise zusammen fasst (nicht mehr als ~10 Worte).
 
-8. Wählen Sie die Option
-   `Create a new branch for this commit and start a pull request`.
+8. Drücken Sie auf `Commit changes`.
 
-9. Drücken Sie auf `Commit changes`.
+9. Drücken Sie auf `Code` um zurück zur Übersicht über das Repository zu
+   gelangen.
+
+10. Drücken Sie auf `Contribute` und anschließend auf `Open pull request`.
 
 10. Es öffnet sich ein neues Fenster mit der Überschrift `Open a pull request`.
    Tragen Sie dort einen passenden Titel ein, zum Beispiel den Inhalt der zuvor
@@ -44,7 +46,7 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
 11. Drücken Sie schließlich auf `Create pull request`.
     Ihre vorgeschlagenen Änderungen sind nun zum Review bei den
     Vorlesungs-Assistenten eingereicht. Falls Rückfragen aufkommen, werden Sie
-    über ihre bei Github hinterlegte E-Mail-Adresse benachrichtigt. Diese können
+    über Ihre bei Github hinterlegte E-Mail-Adresse benachrichtigt. Diese können
     Sie dann direkt per Mail oder über den enthaltenen Github-Link beantworten.
     Sobald alle Fragen geklärt sind werden die Änderungen bald in das Wiki
     eingebunden.
