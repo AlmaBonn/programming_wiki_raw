@@ -95,11 +95,12 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
 
        rm file-with-a-new-name.txt
 
-   **Warnung: Der im folgenden beschriebene Befehl zum Löschen von Ordnern
-     sollte nur in Kombination mit einem validen Ordner-Namen und mit Vorsicht
-     genutzt werden.
-     Der Befehl `rm -rf /` löscht zum Beispiel unwiderruflich das gesamte
-     Dateisystem**
+   > [!CAUTION]
+   > Der im folgenden beschriebene Befehl zum Löschen von Ordnern
+   > sollte nur in Kombination mit einem validen Ordner-Namen und mit Vorsicht
+   > genutzt werden.
+   > Der Befehl `rm -rf /` löscht zum Beispiel unwiderruflich das gesamte
+   > Dateisystem.
 
    Anschließend können Sie wieder in den Ursprungsordner zurückkehren und auch
    den neu erstellten Order example-directory mit
