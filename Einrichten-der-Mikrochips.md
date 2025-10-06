@@ -27,7 +27,7 @@ dem untenstehenden Code. Sie dürfen natürlich gerne in der Funktion `run`
 weitere von Ihnen implementierte Funktionen aufrufen, aber implementieren Sie
 unter keinen Umständen eine eigene `main`-Funktion!
 > [!CAUTION]
-> Bitte beachten Sie auch unsere Hinweise unter auf dieser
+> Bitte beachten Sie auch unsere Hinweise auf dieser
 > [Seite](Wichtige-Hinweise-zum-Mikrochip).
 
 
@@ -55,6 +55,9 @@ void loop () {
    return;
 }
 ```
+
+Um die in C übliche `printf`-Funktion zu verwenden können Sie LibPrintf
+installieren und einbinden, was [hier](Printf-Bibliothek) erklärt wird.
 
 # Probleme und Lösungen
 Probleme beim Einrichten der Mikrochips und der IDE sowie passende Lösungen

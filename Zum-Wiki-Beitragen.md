@@ -39,11 +39,11 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
 
 10. Drücken Sie auf `Contribute` und anschließend auf `Open pull request`.
 
-10. Es öffnet sich ein neues Fenster mit der Überschrift `Open a pull request`.
+11. Es öffnet sich ein neues Fenster mit der Überschrift `Open a pull request`.
    Tragen Sie dort einen passenden Titel ein, zum Beispiel den Inhalt der zuvor
    gewählten Commit-Message. Falls nötig können Sie Ihre Änderungen auch im
    `Description`-Feld ausführlicher beschreiben.
-11. Drücken Sie schließlich auf `Create pull request`.
+12. Drücken Sie schließlich auf `Create pull request`.
     Ihre vorgeschlagenen Änderungen sind nun zum Review bei den
     Vorlesungs-Assistenten eingereicht. Falls Rückfragen aufkommen, werden Sie
     über Ihre bei Github hinterlegte E-Mail-Adresse benachrichtigt. Diese können
