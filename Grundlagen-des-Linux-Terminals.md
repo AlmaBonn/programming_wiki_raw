@@ -1,20 +1,79 @@
-Hier stellen wir einige Grundlagen zur Verwendung des Linux-Terminals vor.
+Hier stellen wir einige Grundlagen zur Verwendung des Terminals vor.
 
+# Erste Erklärung
+
+Ein Terminal ist das interaktive Textfenster, das man direkt nach dem Einloggen
+sieht.  Möglicherweise sieht man nach dem Einloggen auch zunächst einen leeren
+Desktop, dann kann man über das Kontextmenü oder ein Symbol ein Terminal
+starten.  Das Terminal an sich ist ein Programm, das Eingaben (durch die
+Tastatur) und Ausgaben (zum Bildschirm) eines zweiten Programms durch das
+Betriebssystem leitet (und bei manchen Anwendungen auch über das Netzwerk, so
+daß Computer aus der Ferne gesteuert werden können).  In unserem Fall ist das
+zweite Program eine sogenannte "Shell," meistens die `bash`.  Mit dieser
+interagieren wir in der Praxis des Programmierens fast ausschließlich.
+
+Die Shell erwartet Eingaben des Nutzers (also Ihre) über die Tastatur.  Wenn
+man also ein oder mehrere Worte tippt und dann die Entertaste drückt (die große
+mit dem eckigen Pfeil nach links), interpretiert die Shell das erste Wort als
+Programm und die weiteren als Argumente, die diesem Program übergeben werden
+sollen.  Argumente haben oft die spezielle Form `-a` oder `--bcd` und werden
+vom Programm als spezielle Schalter interpretiert.  Jedes Programm macht das
+anders; idealerweise steht die Konvention auf seiner man-Page (s. u.).  Die
+Shell sucht dann das Programm dieses Namens im Dateisystem und führt es aus.
+
+ - Ein wichtiges Program ist zum Beispiel `man`.  Es greift auf eine Datenbank
+   an Hilfen zu den meisten Programmen zu und zeigt diese an.  Das gesuchte
+   Programm ist als Argument anzugeben.  Probieren Sie also einmal `man man`,
+   oder `man bash`.  Man verläßt den Hilfeviewer mit der Taste `q`.
+
+ - Ein weiteres Program ist `echo`.  Es gibt alle Argumente auf den Bildschirm
+   aus, probieren Sie `echo abc`.
+
+Die Shell versteht tatsächlich eine ganze Programmiersprache, da ist ein
+Programmaufruf nur ein Spezialfall.  Variablen werden ohne Leerzeichen
+gesetzt.  Leerzeichen können mit Anführungszeichen zum Teil eines Wortes
+gemacht werden.  Ein Kommando in backtics wird ausgeführt und dessen Ergebnis
+an Ort und Stelle eingesetzt.  Versuchen Sie, die Ergebnisse folgender Sitzung
+zu verstehen:
+
+    ABC="eine Variable      mit Leerzeichen"
+    echo $ABC
+    echo "$ABC"
+    DEF=`echo $ABC`
+    echo $DEF
+    echo "$DEF"
+    GHI=`echo "$ABC"`
+    echo $GHI
+    echo "$GHI"
+
+Der Kern der Erkenntnis ist der, daß "a b   c" ein einzelnes Wort bleibt und
+daher auch ein einzelnes Argument.  Die Leerzeichen zwischen Worten werden als
+Trenner registriert und dann sofort vergessen.
+
+Die Shell kann weiterhin die Ausgabe eines Programms direkt als Eingabe eines
+zweiten verwenden.  Der Aufruf 'wc -w' zählt beispielsweise Worte, was macht
+also:
+
+    echo $ABC | wc -w
+
+Dies soll nur der Anfang sein.
+Es gibt sehr viele sehr gute Dokumente zur Unix-Shell.
 Eine gute Übersicht zu diesem Thema gibt es auch in den Abschnitten 1-4 sowie
-der Sektion `Wichtige Tipps für den Anfang` in dieser
+der Sektion *Wichtige Tipps für den Anfang* in dieser
 [Anleitung](https://deployn.de/blog/linux-terminal/).
 
 # Erste Schritte
 
 ## Ordnerstruktur
-1. Öffnen Sie ein Terminal mit der Tastenkombination `Strg + Alt + T` oder über
-   die Suchfunktion des Anwendungsmenüs.
+
+1. Öffnen Sie ein Terminal mit der Tastenkombination `Strg + Alt + T`, über ein
+   Icon oder über die Suchfunktion des Anwendungsmenüs.
 
 2. Zunächst können Sie zur Orientierung als ersten Befehl
 
        ls
 
-   in das Terminal eingeben und mit `Enter` bestätigen.
+   in das Terminal eingeben und mit Enter bestätigen.
    Dieser Befehl listet alle Dateien auf, die sich im aktuellen Ordner befinden.
    Wann immer Sie auf einen Befehl stoßen, dessen Funktionsweise Sie nicht
    kennen, können Sie sich mit dem Befehl `man` eine Übersicht angeben lassen.
@@ -26,20 +85,29 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
    konfigurieren kann. Zum Beispiel gibt es die Option die Dateien nach ihrem
    letzten Änderungsdatum zu sortieren. Neben `man` ist auch die help-Option
    nützlich, die Sie mit `BEFEHL --help`, also zum Beispiel `ls --help`
-   aufrufen können.
+   aufrufen können.  Der Buchstabe `q` schließt den Hilfeviewer.
    Eine gängige Konfiguration von `ls` sind die Optionen
 
        ls -l -a -F
 
-   die mit
+   die oft mit
 
        ll
 
-   sogar einen eigenen Befehl erhalten hat.
+   zu einem eigenen Befehl definiert werden.
    Dieser Befehl liefert eine Liste, die neben den Dateinamen auch das Datum
    der letzten Änderung, die Dateigröße und die Zugriffsrechte anzeigt.
    Für weitere Informationen zu Zugriffsrechten verweisen wir auf
    diese [Anleitung](https://www.howtoforge.de/anleitung/was-ist-umask-unter-linux/).
+
+   Wer mag, definiert sich eigene Befehle mit z. B.
+
+       alias lt="ls -ltr"
+
+   Der Befehl `alias` ist kein Programm, sondern in die bash eingebaut.  Dies
+   läßt sich nachlesen, indem nach `man bash` mit `/alias` und Enter eine
+   Suche gestartet wird.  Durch folgende und vorherige Fundstellen iteriert man
+   mit `n` und `N`.
 
 3. Mit dem Befehl
 
@@ -63,6 +131,8 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
        cd ..
 
    verwenden.
+   Die Punkte sind unter Unix keine Syntax sondern echte Dateien (in diesem
+   Fall Verzeichnisse), `.` ist das aktuelle und `..` das nächsthöhere.
 
 5. Erstellen Sie als nächstes einen neuen Ordner namens example-directory mit
 
@@ -83,7 +153,11 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
    [Nano-Anleitung](https://www.howtoforge.de/anleitung/linux-nano-editor-fuer-anfaenger-erklaert-10-beispiele/) und die
    [vim-Anleitung](https://ieee.uni-passau.de/uploads/2014/02/vim-basics.pdf)
    sowie den Kommandozeilenbefehl `vimtutor`.
-   Während `vim` der umfassendere Editor ist, ist `nano` einsteigerfreundlicher.
+   Während `vim` der umfassendere Editor ist, ist `nano`
+   einsteigerfreundlicher.  Die anfängliche Mühe beim Lernen eines Editors
+   amortisiert sich bei regelmäßiger Nutzung innerhalb von Tagen.
+   Wenn Sie in `vim` per Tastenkombination und auswendig ein beliebiges
+   Rechteck markieren, löschen und einfügen können, haben Sie es geschafft.
 
 7. Benennen Sie die Datei nun in file-with-a-new-name.txt um. Dafür verwenden
    Sie
@@ -116,7 +190,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
  - Um lange Befehle nicht mehrmals eingeben zu müssen, kann man mit den
    Pfeiltasten auch die zuletzt genutzten Befehle durchsuchen (Pfeiltaste nach
    oben für den nächstälteren und nach unten für den nächstjüngeren Befehl) und
-   erneut mit `Enter` bestätigen.
+   erneut mit Enter bestätigen.
 
    Für Befehle, die schon etwas länger zurückliegen bietet sich die
    Rückwärtssuche mit `Strg + R` an.
@@ -138,6 +212,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
     durchgehen.
 
 ## Die Manual Page
+
  Wir schauen uns nun die manual page von `ls` etwas genauer an, um an einem
  Beispiel zu sehen wie wir passende Optionen finden können und gegebenen
  Optionen verstehen können.
@@ -150,7 +225,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
 
       /by time
 
-eingeben und mit `Enter` bestätigen. Hierbei hat `/` die Funktion in den
+eingeben und mit Enter bestätigen. Hierbei hat `/` die Funktion in den
 Suchmodus zu kommen. Wenn Sie die Option für das Sortieren nach den Zeitstempeln
 gefunden haben, können Sie nun per
 
