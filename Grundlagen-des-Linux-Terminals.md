@@ -54,25 +54,26 @@ Die Shell kann weiterhin die Ausgabe eines Programms direkt als Eingabe eines
 zweiten verwenden.  Der Aufruf 'wc -w' zählt beispielsweise Worte, was macht
 also:
 
-    echo $ABC | wc -l
+    echo $ABC | wc -w
 
 Dies soll nur der Anfang sein.
 Es gibt sehr viele sehr gute Dokumente zur Unix-Shell.
 Eine gute Übersicht zu diesem Thema gibt es auch in den Abschnitten 1-4 sowie
-der Sektion `Wichtige Tipps für den Anfang` in dieser
+der Sektion *Wichtige Tipps für den Anfang* in dieser
 [Anleitung](https://deployn.de/blog/linux-terminal/).
 
 # Erste Schritte
 
 ## Ordnerstruktur
-1. Öffnen Sie ein Terminal mit der Tastenkombination `Strg + Alt + T` oder über
-   die Suchfunktion des Anwendungsmenüs.
+
+1. Öffnen Sie ein Terminal mit der Tastenkombination `Strg + Alt + T`, über ein
+   Icon oder über die Suchfunktion des Anwendungsmenüs.
 
 2. Zunächst können Sie zur Orientierung als ersten Befehl
 
        ls
 
-   in das Terminal eingeben und mit `Enter` bestätigen.
+   in das Terminal eingeben und mit Enter bestätigen.
    Dieser Befehl listet alle Dateien auf, die sich im aktuellen Ordner befinden.
    Wann immer Sie auf einen Befehl stoßen, dessen Funktionsweise Sie nicht
    kennen, können Sie sich mit dem Befehl `man` eine Übersicht angeben lassen.
@@ -84,20 +85,29 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
    konfigurieren kann. Zum Beispiel gibt es die Option die Dateien nach ihrem
    letzten Änderungsdatum zu sortieren. Neben `man` ist auch die help-Option
    nützlich, die Sie mit `BEFEHL --help`, also zum Beispiel `ls --help`
-   aufrufen können.
+   aufrufen können.  Der Buchstabe `q` schließt den Hilfeviewer.
    Eine gängige Konfiguration von `ls` sind die Optionen
 
        ls -l -a -F
 
-   die mit
+   die oft mit
 
        ll
 
-   sogar einen eigenen Befehl erhalten hat.
+   zu einem eigenen Befehl definiert werden.
    Dieser Befehl liefert eine Liste, die neben den Dateinamen auch das Datum
    der letzten Änderung, die Dateigröße und die Zugriffsrechte anzeigt.
    Für weitere Informationen zu Zugriffsrechten verweisen wir auf
    diese [Anleitung](https://www.howtoforge.de/anleitung/was-ist-umask-unter-linux/).
+
+   Wer mag, definiert sich eigene Befehle mit z. B.
+
+       alias lt="ls -ltr"
+
+   Der Befehl `alias` ist kein Programm, sondern in die bash eingebaut.  Dies
+   läßt sich nachlesen, indem nach `man bash` mit `/alias` und Enter eine
+   Suche gestartet wird.  Durch folgende und vorherige Fundstellen iteriert man
+   mit `n` und `N`.
 
 3. Mit dem Befehl
 
@@ -121,6 +131,8 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
        cd ..
 
    verwenden.
+   Die Punkte sind unter Unix keine Syntax sondern echte Dateien (in diesem
+   Fall Verzeichnisse), `.` ist das aktuelle und `..` das nächsthöhere.
 
 5. Erstellen Sie als nächstes einen neuen Ordner namens example-directory mit
 
@@ -141,7 +153,11 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
    [Nano-Anleitung](https://www.howtoforge.de/anleitung/linux-nano-editor-fuer-anfaenger-erklaert-10-beispiele/) und die
    [vim-Anleitung](https://ieee.uni-passau.de/uploads/2014/02/vim-basics.pdf)
    sowie den Kommandozeilenbefehl `vimtutor`.
-   Während `vim` der umfassendere Editor ist, ist `nano` einsteigerfreundlicher.
+   Während `vim` der umfassendere Editor ist, ist `nano`
+   einsteigerfreundlicher.  Die anfängliche Mühe beim Lernen eines Editors
+   amortisiert sich bei regelmäßiger Nutzung innerhalb von Tagen.
+   Wenn Sie in `vim` per Tastenkombination und auswendig ein beliebiges
+   Rechteck markieren, löschen und einfügen können, haben Sie es geschafft.
 
 7. Benennen Sie die Datei nun in file-with-a-new-name.txt um. Dafür verwenden
    Sie
@@ -174,7 +190,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
  - Um lange Befehle nicht mehrmals eingeben zu müssen, kann man mit den
    Pfeiltasten auch die zuletzt genutzten Befehle durchsuchen (Pfeiltaste nach
    oben für den nächstälteren und nach unten für den nächstjüngeren Befehl) und
-   erneut mit `Enter` bestätigen.
+   erneut mit Enter bestätigen.
 
    Für Befehle, die schon etwas länger zurückliegen bietet sich die
    Rückwärtssuche mit `Strg + R` an.
@@ -196,6 +212,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
     durchgehen.
 
 ## Die Manual Page
+
  Wir schauen uns nun die manual page von `ls` etwas genauer an, um an einem
  Beispiel zu sehen wie wir passende Optionen finden können und gegebenen
  Optionen verstehen können.
@@ -208,7 +225,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
 
       /by time
 
-eingeben und mit `Enter` bestätigen. Hierbei hat `/` die Funktion in den
+eingeben und mit Enter bestätigen. Hierbei hat `/` die Funktion in den
 Suchmodus zu kommen. Wenn Sie die Option für das Sortieren nach den Zeitstempeln
 gefunden haben, können Sie nun per
 
