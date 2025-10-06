@@ -16,10 +16,10 @@ Die Shell erwartet Eingaben des Nutzers (also Ihre) über die Tastatur.  Wenn
 man also ein oder mehrere Worte tippt und dann die Entertaste drückt (die große
 mit dem eckigen Pfeil nach links), interpretiert die Shell das erste Wort als
 Programm und die weiteren als Argumente, die diesem Program übergeben werden
-sollen.  Argumente haben of die spezielle Form `-a` oder `--bcd` und werden vom
-Programm als spezielle Schalter interpretiert.  Jedes Programm macht das
-anders; idealerweise steht die Konvention auf seiner man-Page.  Die Shell sucht
-dann das Programm dieses Namens im Dateisystem und führt es aus.
+sollen.  Argumente haben oft die spezielle Form `-a` oder `--bcd` und werden
+vom Programm als spezielle Schalter interpretiert.  Jedes Programm macht das
+anders; idealerweise steht die Konvention auf seiner man-Page (s. u.).  Die
+Shell sucht dann das Programm dieses Namens im Dateisystem und führt es aus.
 
  - Ein wichtiges Program ist zum Beispiel `man`.  Es greift auf eine Datenbank
    an Hilfen zu den meisten Programmen zu und zeigt diese an.  Das gesuchte
@@ -29,10 +29,10 @@ dann das Programm dieses Namens im Dateisystem und führt es aus.
  - Ein weiteres Program ist `echo`.  Es gibt alle Argumente auf den Bildschirm
    aus, probieren Sie `echo abc`.
 
-Die Shell versteht tatsächlich eine ganze Programmiersprache, ein
-Programmaufruf ist nur ein Spezialfall.  Vaniablen werden ohne Leerzeichen
+Die Shell versteht tatsächlich eine ganze Programmiersprache, da ist ein
+Programmaufruf nur ein Spezialfall.  Variablen werden ohne Leerzeichen
 gesetzt.  Leerzeichen können mit Anführungszeichen zum Teil eines Wortes
-gemacht werden.  Ein Kommando in backtics wird aufgeführt und dessen Ergebnis
+gemacht werden.  Ein Kommando in backtics wird ausgeführt und dessen Ergebnis
 an Ort und Stelle eingesetzt.  Versuchen Sie, die Ergebnisse folgender Sitzung
 zu verstehen:
 
