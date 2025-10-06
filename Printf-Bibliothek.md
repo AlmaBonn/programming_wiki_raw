@@ -38,10 +38,10 @@ void run () {
 
 /* Der Code in der setup-Funktion wird genau einmal ausgeführt. */
 void setup () {
-  /* Wir warten bis die USB-Verbindung besteht. */
-  while (!Serial) { /* warten */ }
   /* Intialisiere Konsole mit der Datenrate von 9600 Bits pro Sekunde. */
   Serial.begin (9600);
+  /* Wir warten bis die USB-Verbindung besteht. */
+  while (!Serial) { /* warten */ }
   run ();
 }
 

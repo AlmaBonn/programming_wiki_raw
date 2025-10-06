@@ -8,7 +8,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
 
 ## Ordnerstruktur
 1. Öffnen Sie ein Terminal mit der Tastenkombination `Strg + Alt + T` oder über
-   die Suchfunktion des Anwendungsmenü.
+   die Suchfunktion des Anwendungsmenüs.
 
 2. Zunächst können Sie zur Orientierung als ersten Befehl
 
@@ -23,8 +23,10 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
        man ls
 
    ein. Unter anderem listet `man` alle Parameter auf, mit denen man `ls`
-   konfigurieren kann. Zum Beispiel gibt es die Option die Datein nach ihrem
-   letzten Änderungsdatum zu sortieren.
+   konfigurieren kann. Zum Beispiel gibt es die Option die Dateien nach ihrem
+   letzten Änderungsdatum zu sortieren. Neben `man` ist auch die help-Option
+   nützlich, die Sie mit `BEFEHL --help`, also zum Beispiel `ls --help`
+   aufrufen können.
    Eine gängige Konfiguration von `ls` sind die Optionen
 
        ls -l -a -F
@@ -48,7 +50,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
 
 4. Um den Ordner zu wechseln gibt es den `cd` Befehl.
    Wählen Sie einen der Ordner, der Ihnen mit `ls` angezeigt wird (Ordner-Namen
-   enden im Unterschied zu Datei-Namen in einem `/`), z.B. `Downloads`.
+   enden im Unterschied zu Dateinamen in einem `/`), z.B. `Downloads`.
    Um nun in den Downloads-Ordner zu wechseln kann der Befehl
 
        cd Downloads
@@ -103,7 +105,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
   > unwiderruflich das gesamte Dateisystem löschen.
 
    Anschließend können Sie wieder in den Ursprungsordner zurückkehren und auch
-   den neu erstellten Order example-directory mit
+   den neu erstellten Ordner example-directory mit
 
        rm -r example-directory
 
@@ -128,8 +130,8 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
    Eingabe `cd D` gefolgt von `Tab`, da sich der restliche Name eindeutig
    erschließt.
 
-   Ist es bei der Eingabe nich eindeutig, welcher Ordner gemeint ist listet
-   `Tab Tab` alle Ordern auf, die in Frage kommen (ähnlich zum `ls` Befehl).
+   Ist es bei der Eingabe nicht eindeutig, welcher Ordner gemeint ist listet
+   `Tab Tab` alle Ordner auf, die in Frage kommen (ähnlich zum `ls` Befehl).
 
   - Um im Terminal langes hochscrollen zu vermeiden, können Sie auch mit der
     Tastenkombination `Shift + PageUp` sukzessive durch den Terminalverlauf
@@ -141,7 +143,8 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
  Optionen verstehen können.
 
  Rufen Sie erneut die manual page von `ls` auf. Das erste Ziel ist es nun
- Optionen zu finden, die eine umgekehrte Sortierung nach Zeitstempel bietet.
+ Optionen zu finden, die eine umgekehrte Sortierung nach Zeitstempel
+ (Änderungsdatum) bietet.
 
  Nutzen Sie hierfür die Möglichkeit in der manual page zu suchen in dem Sie
 
@@ -154,8 +157,8 @@ gefunden haben, können Sie nun per
      /reverse
 
 nach der Option suchen, um die Sortierungsreihenfolge umzukehren.
-Probieren Sie den gefunden Befehl einmal aus. In welcher Reihenfolge zeigt
-`ls` die Resultate ohne die übergebene Optionen an? Sie können für diese Frage
+Probieren Sie den gefundenen Befehl einmal aus. In welcher Reihenfolge zeigt
+`ls` die Resultate ohne die übergebenen Optionen an? Sie können für diese Frage
 auch wieder auf `man ls` nachschauen.
 
 Mithilfe der manual page von `ls` können Sie nun auch herausfinden was jeweils

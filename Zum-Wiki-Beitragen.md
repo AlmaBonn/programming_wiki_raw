@@ -23,14 +23,14 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
 5. Bearbeiten Sie die Datei wie gewünscht.
    Alle Dateien sind im Markdown-Format geschrieben, welches grundlegende
    Datei-Formatierungen ermöglicht.
-   Um einen Ausblick auf das formattierte Ergebnis zu bekommen kann zwischen der
+   Um einen Ausblick auf das formatierte Ergebnis zu bekommen kann zwischen der
    `Edit`- und der `Preview`-Ansicht gewechselt werden.
 
 6. Sobald Sie mit den Änderungen zufrieden sind klicken Sie auf
    `Commit changes...`.
 
 7. Tragen Sie zunächst eine Commit-Message ein, die die vorgenommenen Änderungen
-   knapp und präzise zusammen fasst (nicht mehr als ~10 Worte).
+   knapp und präzise zusammenfasst (nicht mehr als ~10 Worte).
 
 8. Drücken Sie auf `Commit changes`.
 
@@ -55,7 +55,7 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
 
 Markdown ist eine Sprache, die einfache Textformattierung ermöglicht.
 Im Folgenden listen wir die wichtigsten Funktionalitäten auf, orientieren Sie
-sich im Allgemeinen auch an der Formattierung der Datei, welche Sie bearbeiten.
+sich im Allgemeinen auch an der Formatierung der Datei, welche Sie bearbeiten.
 Für weitere Informationen empfehlen wir den
 [Markdown-Guide](https://www.markdownguide.org/basic-syntax/#overview).
 

@@ -8,7 +8,7 @@ Wie Sie wahrscheinlich wissen hat jedes C-Programm eine main-Funktion.
 Auf den Mikrochips dürfen wir aber unter keinen Umständen eine main-Funktion
 implementieren, da diese bereits intern vorliegt und das Überschreiben dieser
 main-Funktion mit einer eigenen main-Funktion dazu führen kann, dass der
-Mirochip dauerhaft nicht mehr funkioniert.
+Mikrochip dauerhaft nicht mehr funktioniert.
 Sie können einfach die run-Funktion in dem Beispiel-Code
 [hier](Einrichten-der-Mikrochips#beispiel-für-ausgangscode) als Ausgangspunkt
 verwenden.
@@ -16,7 +16,7 @@ verwenden.
 
 ## Allokieren von zu viel Speicher
 
-Die Mikrochips haben 32kB Arbeitsspeicher und Sie dürfen nicht mehr Speicher
+Die Mikrochips haben 2,5kB Arbeitsspeicher und Sie dürfen nicht mehr Speicher
 allokieren, da andernfalls der Mikrochip möglicherweise dauerhaft nicht mehr
 verwendet werden kann. Speicher kann per `malloc` und `calloc` auf dem Heap oder
 auch auf dem Stack per `DATATYPE VAR_NAME[SIZE];` allokiert werden.
