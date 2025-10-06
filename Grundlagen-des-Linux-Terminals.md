@@ -1,5 +1,63 @@
-Hier stellen wir einige Grundlagen zur Verwendung des Linux-Terminals vor.
+Hier stellen wir einige Grundlagen zur Verwendung des Terminals vor.
 
+# Erste Erklärung
+
+Ein Terminal ist das interaktive Textfenster, das man direkt nach dem Einloggen
+sieht.  Möglicherweise sieht man nach dem Einloggen auch zunächst einen leeren
+Desktop, dann kann man über das Kontextmenü oder ein Symbol ein Terminal
+starten.  Das Terminal an sich ist ein Programm, das Eingaben (durch die
+Tastatur) und Ausgaben (zum Bildschirm) eines zweiten Programms durch das
+Betriebssystem leitet (und bei manchen Anwendungen auch über das Netzwerk, so
+daß Computer aus der Ferne gesteuert werden können).  In unserem Fall ist das
+zweite Program eine sogenannte "Shell," meistens die `bash`.  Mit dieser
+interagieren wir in der Praxis des Programmierens fast ausschließlich.
+
+Die Shell erwartet Eingaben des Nutzers (also Ihre) über die Tastatur.  Wenn
+man also ein oder mehrere Worte tippt und dann die Entertaste drückt (die große
+mit dem eckigen Pfeil nach links), interpretiert die Shell das erste Wort als
+Programm und die weiteren als Argumente, die diesem Program übergeben werden
+sollen.  Argumente haben of die spezielle Form `-a` oder `--bcd` und werden vom
+Programm als spezielle Schalter interpretiert.  Jedes Programm macht das
+anders; idealerweise steht die Konvention auf seiner man-Page.  Die Shell sucht
+dann das Programm dieses Namens im Dateisystem und führt es aus.
+
+ - Ein wichtiges Program ist zum Beispiel `man`.  Es greift auf eine Datenbank
+   an Hilfen zu den meisten Programmen zu und zeigt diese an.  Das gesuchte
+   Programm ist als Argument anzugeben.  Probieren Sie also einmal `man man`,
+   oder `man bash`.  Man verläßt den Hilfeviewer mit der Taste `q`.
+
+ - Ein weiteres Program ist `echo`.  Es gibt alle Argumente auf den Bildschirm
+   aus, probieren Sie `echo abc`.
+
+Die Shell versteht tatsächlich eine ganze Programmiersprache, ein
+Programmaufruf ist nur ein Spezialfall.  Vaniablen werden ohne Leerzeichen
+gesetzt.  Leerzeichen können mit Anführungszeichen zum Teil eines Wortes
+gemacht werden.  Ein Kommando in backtics wird aufgeführt und dessen Ergebnis
+an Ort und Stelle eingesetzt.  Versuchen Sie, die Ergebnisse folgender Sitzung
+zu verstehen:
+
+    ABC="eine Variable      mit Leerzeichen"
+    echo $ABC
+    echo "$ABC"
+    DEF=`echo $ABC`
+    echo $DEF
+    echo "$DEF"
+    GHI=`echo "$ABC"`
+    echo $GHI
+    echo "$GHI"
+
+Der Kern der Erkenntnis ist der, daß "a b   c" ein einzelnes Wort bleibt und
+daher auch ein einzelnes Argument.  Die Leerzeichen zwischen Worten werden als
+Trenner registriert und dann sofort vergessen.
+
+Die Shell kann weiterhin die Ausgabe eines Programms direkt als Eingabe eines
+zweiten verwenden.  Der Aufruf 'wc -w' zählt beispielsweise Worte, was macht
+also:
+
+    echo $ABC | wc -l
+
+Dies soll nur der Anfang sein.
+Es gibt sehr viele sehr gute Dokumente zur Unix-Shell.
 Eine gute Übersicht zu diesem Thema gibt es auch in den Abschnitten 1-4 sowie
 der Sektion `Wichtige Tipps für den Anfang` in dieser
 [Anleitung](https://deployn.de/blog/linux-terminal/).
