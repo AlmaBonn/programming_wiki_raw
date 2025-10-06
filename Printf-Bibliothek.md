@@ -16,7 +16,7 @@ Eine allgemeine Erklärung zum Softwarebibliotheken in der Arduino IDE finden
 Sie
 [hier](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/).
 
-# Einbinden von Printf
+# Einbinden von LibPrintf
 Sobald wir LibPrintf installiert haben, können wir die Softwarebibliothek
 einbinden in dem wir wieder auf **Sketch** klicken und dann in dem Menü unter
 **Include Library** LibPrintf auswählen. Hierdurch sollte dann automatisch am
