@@ -21,4 +21,4 @@ allokieren, da andernfalls der Mikrochip möglicherweise dauerhaft nicht mehr
 verwendet werden kann. Speicher kann per `malloc` und `calloc` auf dem Heap oder
 auch auf dem Stack per `DATATYPE VAR_NAME[SIZE];` allokiert werden.
 `SIZE` beschreibt die Anzahl von `DATATYPE` allokierten Elementen deren Größe
-für ein einzelnes Element in Bytes sie per `sizeof (DATATYPE)` erhalten können.
+für ein einzelnes Element in Bytes Sie per `sizeof (DATATYPE)` erhalten können.

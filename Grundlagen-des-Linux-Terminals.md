@@ -16,7 +16,7 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
 
    in das Terminal eingeben und mit `Enter` bestätigen.
    Dieser Befehl listet alle Dateien auf, die sich im aktuellen Ordner befinden.
-   Wann immer Sie auf einen Befehl stoßen, dessen Funktionsweise sie nicht
+   Wann immer Sie auf einen Befehl stoßen, dessen Funktionsweise Sie nicht
    kennen, können Sie sich mit dem Befehl `man` eine Übersicht angeben lassen.
    In diesem Fall geben Sie also
 
