@@ -142,8 +142,8 @@ Das Ergebnis ist definierterweise entweder 0 oder 1.  Die Ausdrücke
     a = 5, (a == 5 || a == 6)
     a = 5, a || a == 6
 
-ergeben also beide als Wert 1 (bitte den Komma-Operator nachschlagen) und weist
-als Nebeneffekt vorher a den Wert 5 zu.
+ergeben also beide als Wert 1 (bitte den Komma-Operator nachschlagen) und
+weisen als Nebeneffekt vorher a den Wert 5 zu.
 Aus der Präzedenz der Operatoren ergibt sich, daß die runden Klammern im ersten
 Beispiel überflüssig sind.
 
@@ -170,6 +170,7 @@ Variable verändert:
         unsigned char i;
         int hilfswert = eingabe + 4;
         for (i = 0; i < 3; ++i) { a += hilfswert; hilfswert *= eingabe; }
+        /* die zweite Multiplikation im letzten Durchlauf ist unnuetz! */
     }
 
 Wichtig ist hier, daß keine dieser Funktionen bereits aufgerufen wird!
