@@ -93,9 +93,17 @@ werden dürfen, und auf denen direkt operiert wird.  Wichtig für uns sind:
    In diesen wird eine Ganzzahl und ein Exponent zur Basis 2 untergebracht.
 
 Wir können also eine ganze Menge an Zahlen darstellen.  Buchstaben werden nach
-dem ASCII-Code als Zahlen abgespeichert, und ein Programmierer muß sich merken,
-welche `char`-Variablen tatsächlich Zahlen speichern und welche Buchstaben
-kodieren.
+dem 7-Bit
+[ASCII-Code](https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange)
+als Zahlen abgespeichert, und ein Programmierer muß sich merken, welche
+`char`-Variablen tatsächlich Zahlen speichern und welche Buchstaben kodieren.
+Wenn man in C Zeichenketten in doppelten (!) Anführungszeichen definiert, wird
+jeder Buchstabe automatisch in seine Zahl umgesetzt.  Sonderzeichen erzeugt man
+durch sogenannte Escape-Sequenzen, wie zum Beispiel `\n` für eine neue Zeile.
+Zeichen wie Umlaute, Smileys etc. werden kodiert als Obermenge von 7-Bit ASCII
+über den
+[Unicode](https://de.wikipedia.org/wiki/Unicode)
+durch Sequenzen von bis zu vier Bytes.
 
 Es empfiehlt sich, immer den kleinstmöglichen Wertetyp zu wählen, und immer
 `unsigned` sofern die Zahlen nicht negativ werden können oder sollen.
@@ -188,5 +196,71 @@ Anwenders innerhalb einer Main-Funktion, die noch geschrieben werden muß:
 
 Nochmal, in einem Arduino-Programm darf die main-Funktion *auf keinen Fall*
 geschrieben werden, da sie von der Entwicklungsumgebung vordefiniert wird.
-Die sogenannte Include-Direktive bindet hier den Inhalt der sogenannten
+Die sogenannte Include-Direktive bindet übrigens den Inhalt der sogenannten
 Header-Datei `stdlib.h` ein, sonst wäre `EXIT_SUCCESS` nicht definiert.
+
+Es gibt noch einige Feinheiten, die relevant werden, wenn ein Programm in
+Funktionen zerlegt wird, die in mehreren verschiedenen Code-Dateien stehen.
+Eine Funktion oder Variable kann `static` sein, wenn sie nur in ihrer eigenen
+Datei aufrufbar sein soll.  Dies ist eine sinnvolle Standardannahme.
+Eine lokale Variable, die static deklariert wird, behält ihren Wert über
+mehrere Aufrufe der Funktion hinweg - ein Feature, das sich klug und unklug
+einsetzen läßt und das wir deswegen normalerweise nicht nutzen.
+
+# Compilieren und Ausführen
+
+Die Sprache C wurde vor über fünfzig Jahren menschendefiniert, in Unkenntnis
+künftiger Hardware und daher bewußt auch unabhängig von damaliger Hardware.
+Für jede gegebene Hardware ist daher ein Mechanismus notwendig, um ein
+C-Programm in den passenden Assembly-Code zu übersetzen und diesen dann in eine
+äquivalente Binärdarstellung umzuformatieren, die das Betriebssystem dieser
+Hardware in den Programmspeicher des Prozessors laden kann, so daß dieser es
+lesen und direkt ausführen kann.  Dieser Mechanismus wird Compilieren genannt
+und von einem Programm, dem Compiler, durchgeführt, der notwendigerweise sowohl
+Hardware- als auch betriebssystemabhängig arbeitet.
+
+Wir schreiben nun ein Beispielprogramm in eine Datei first_compile.c:
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    static int verdoppeln (int a) { return 2 * a; }
+    int main (void) {
+        int wert = 5;
+        wert = verdoppeln (wert);
+        wert = verdoppeln (3 * wert);
+        printf ("Der Wert ist am Ende %d\n", wert);
+        return EXIT_SUCCESS;
+    }
+
+Die printf-Anweisung ersetzt die %-Codes der Reihe nach mit dem formatierten
+Wert der folgenden Parameter.  Näheres steht unter `man 3 printf`.
+
+Diese Datei übersetzen wir in Assembler mit
+
+    gcc -Wall -S first_compile.c
+
+Der Schalter `-Wall` aktiviert sehr sinnvolle Warnungen.
+Das Ergebnis ist eine Datei `first_compile.s`, in der wir vielleicht nicht
+allzuviel erkennen aber immerhin unsere beiden Funktionsnamen.  Wir können
+zumindest erahnen, daß im Programm gar nicht multipliziert wird, sondern
+verdoppelt wird durch Addition zu sich selbst, und mal drei genommen durch
+Addieren dieses Ergebnisses.
+(Was passiert aber, wenn wir die 2 und 3 durch andere Zahlen ersetzen?)
+
+Den Assembly-Code könnnen wir jetzt in eine ausführbare Datei wandeln mit
+
+    gcc -Wall -o first_compile first_compile.s
+
+Der Name der neuen ausführbaren Datei wird nach dem `-o`-Switch angegeben.
+Diese können wir aufrufen mit
+
+    ./first_compile
+
+Hier erinnern wir uns daran, daß `.` das aktuelle Verzeichnis ist, über das die
+Shell die ausführbare Datei lokalisiert, und freuen uns über eine Ausgabe des
+berechneten Werts von 60.
+
+Wir können den Weg über die Assembly-Datei natürlich abkürzen und direkt
+übersetzen mit
+
+    gcc -Wall -o first_compile first_compile.c
