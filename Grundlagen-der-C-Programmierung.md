@@ -146,3 +146,46 @@ ergeben also beide als Wert 1 (bitte den Komma-Operator nachschlagen) und weist
 als Nebeneffekt vorher a den Wert 5 zu.
 Aus der Präzedenz der Operatoren ergibt sich, daß die runden Klammern im ersten
 Beispiel überflüssig sind.
+
+# Funktionen
+
+Eine Funktion ist in C auch nur eine Variable, die aber zusätzlich ausgeführt
+werden kann.  Jede Funktion hat einen Rückgabewert mit Typ, wenn er
+grundsätzlich vergessen werden soll, ist dieser Typ `void`.  Die Argumentliste
+enthält entweder nur `void` oder eine oder mehrere Parameternamen mit Typ.
+Zwei vollständige Funktionsdeklarationen sind zum Beispiel
+
+    void machnichts (void) {}
+    int summe (int a, int b) { return a + b; }
+
+Globale Variablen werden außerhalb einer Funktion definiert und sind überall im
+Programm sichtbar, lokale Variablen sind innerhalb eines `{ ... }` Blocks
+definiert, also zum Beispiel eines Funktionskörpers.
+So wird mit jedem Aufruf der beiden folgenden Funktionen eine bestimmte globale
+Variable verändert:
+
+    int a = 6;
+    void addtoa (int was) { a += was; }
+    void addloop (int eingabe) {
+        unsigned char i;
+        int hilfswert = eingabe + 4;
+        for (i = 0; i < 3; ++i) { a += hilfswert; hilfswert *= eingabe; }
+    }
+
+Wichtig ist hier, daß keine dieser Funktionen bereits aufgerufen wird!
+Dies geschieht direkt oder indirekt aus dem Hauptprogramm.
+Die Arduino-Umgebung gibt das Hauptprogramm vor und erwartet, daß sämtliche
+Aufrufe des Anwenders in der `setup()`- oder `loop()`-Funktion geschehen.
+Der Standard-C-Compiler der Kommandozeile hingegen erwartet alle Aufrufe des
+Anwenders innerhalb einer Main-Funktion, die noch geschrieben werden muß:
+
+    #include <stdlib.h>
+    int main (void) {
+        addtoa (5);
+        return EXIT_SUCCESS;
+    }
+
+Nochmal, in einem Arduino-Programm darf die main-Funktion *auf keinen Fall*
+geschrieben werden, da sie von der Entwicklungsumgebung vordefiniert wird.
+Die sogenannte Include-Direktive bindet hier den Inhalt der sogenannten
+Header-Datei `stdlib.h` ein, sonst wäre `EXIT_SUCCESS` nicht definiert.
