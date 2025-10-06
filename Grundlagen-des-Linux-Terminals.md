@@ -99,8 +99,8 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
   > Der im folgenden beschriebene Befehl zum Löschen von Ordnern
   > sollte nur in Kombination mit einem validen Ordner-Namen und mit Vorsicht
   > genutzt werden.
-  > Der Befehl `rm -rf /` löscht zum Beispiel unwiderruflich das gesamte
-  > Dateisystem.
+  > Der Befehl `rm -rf /` kann zum Beispiel je nach vorhandenen Berechtigungen
+  > unwiderruflich das gesamte Dateisystem löschen.
 
    Anschließend können Sie wieder in den Ursprungsordner zurückkehren und auch
    den neu erstellten Order example-directory mit
@@ -130,3 +130,33 @@ der Sektion `Wichtige Tipps für den Anfang` in dieser
 
    Ist es bei der Eingabe nich eindeutig, welcher Ordner gemeint ist listet
    `Tab Tab` alle Ordern auf, die in Frage kommen (ähnlich zum `ls` Befehl).
+
+  - Um im Terminal langes hochscrollen zu vermeiden, können Sie auch mit der
+    Tastenkombination `Shift + PageUp` sukzessive durch den Terminalverlauf
+    durchgehen.
+
+## Die Manual Page
+ Wir schauen uns nun die manual page von `ls` etwas genauer an, um an einem
+ Beispiel zu sehen wie wir passende Optionen finden können und gegebenen
+ Optionen verstehen können.
+
+ Rufen Sie erneut die manual page von `ls` auf. Das erste Ziel ist es nun
+ Optionen zu finden, die eine umgekehrte Sortierung nach Zeitstempel bietet.
+
+ Nutzen Sie hierfür die Möglichkeit in der manual page zu suchen in dem Sie
+
+      /by time
+
+eingeben und mit `Enter` bestätigen. Hierbei hat `/` die Funktion in den
+Suchmodus zu kommen. Wenn Sie die Option für das Sortieren nach den Zeitstempeln
+gefunden haben, können Sie nun per
+
+     /reverse
+
+nach der Option suchen, um die Sortierungsreihenfolge umzukehren.
+Probieren Sie den gefunden Befehl einmal aus. In welcher Reihenfolge zeigt
+`ls` die Resultate ohne die übergebene Optionen an? Sie können für diese Frage
+auch wieder auf `man ls` nachschauen.
+
+Mithilfe der manual page von `ls` können Sie nun auch herausfinden was jeweils
+die einzelnen Optionen in dem oben erwähnten `ls -l -a -F` bedeuten.
