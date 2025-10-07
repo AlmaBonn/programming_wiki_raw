@@ -158,6 +158,7 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
    amortisiert sich bei regelmäßiger Nutzung innerhalb von Tagen.
    Wenn Sie in `vim` per Tastenkombination und auswendig ein beliebiges
    Rechteck markieren, löschen und einfügen können, haben Sie es geschafft.
+
    Wenn es nur um das Anzeigen von (Text-)Dateien geht, können Sie auch einen
    sogenannten Pager statt eine Editor verwenden.
    Ein solches Programm ist zum Beispiel `less`.
