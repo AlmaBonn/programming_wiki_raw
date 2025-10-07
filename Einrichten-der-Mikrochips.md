@@ -56,8 +56,8 @@ void loop () {
 }
 ```
 
-Um die in C übliche `printf`-Funktion zu verwenden können Sie LibPrintf
-installieren und einbinden, was [hier](Printf-Bibliothek) erklärt wird.
+Um die in C übliche `printf`-Funktion zu verwenden können Sie dieser
+[Anleitung](Printf-Bibliothek) folgen.
 
 # Probleme und Lösungen
 Probleme beim Einrichten der Mikrochips und der IDE sowie passende Lösungen
