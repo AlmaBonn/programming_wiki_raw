@@ -1,4 +1,4 @@
-Auf dem Mikrochip wird standarmäßig die `printf`-Funktion nicht unterstützt.
+Auf dem Mikrochip wird standardmäßig die `printf`-Funktion nicht unterstützt.
 Diese Funktion ist sehr nützlich, wenn Sie Variablenwerte in einem String
 ausgeben lassen wollen. Daher zeigen wir auf dieser Wiki-Seite wie Sie die
 Funktion `printf` wie in C üblich verwenden zu können.
@@ -17,10 +17,10 @@ Programm so klein wie möglich gehalten wird.
 
 ## Finden von `platform.txt`
 
-Um die Linking-Optionen anzupassen, müssen wir die Datei finden aus denen die
+Um die Linking-Optionen anzupassen, müssen wir die Datei finden aus der die
 Arduino IDE die Optionen lädt. Diese Datei heißt `platform.txt`.
 Sie können die Datei finden in dem Sie in Ihrem Home-Verzeichnis nach ihr suchen
-oder Sie finden den Ort heraus in dem Sie die auführliche Compiler-Ausgabe
+oder Sie finden den Ort heraus in dem Sie die ausführliche Compiler-Ausgabe
 in der Arduino IDE aktivieren.
 
 Das Suchen können Sie unter Linux zum Beispiel mit dem Befehl `find`
@@ -35,17 +35,17 @@ Als Alternative können Sie die ausführliche Compiler-Ausgabe in der Arduino ID
 aktivieren in dem Sie auf **File** und dann dort auf **Preferences** klicken.
 In dem sich dann öffnenden Fenster können Sie bei "Show verbose output during"
 den Haken vor "compile" setzen. Wenn Sie dann ein Programm kompilieren in dem
-Sie auf "Verfiy" oder "Upload" klicken, finden Sie nun unter Output deutlich
+Sie auf "Verify" oder "Upload" klicken, finden Sie nun unter Output deutlich
 mehr Informationen. Suchen Sie dort
 `Using board 'leonardo' from platform in folder:`, was für gewöhnlich bereits
 in der zweiten Zeile der Ausgabe stehen sollte.
-Das dort angebene Verzeichnis sollte `platform.txt` enthalten.
+Das dort angegebene Verzeichnis sollte `platform.txt` enthalten.
 
 ## Ändern von `platform.txt`
 
 Nachdem wir die Datei `platform.txt` gefunden haben, öffnen wir sie mit einem
 Text-Editor unserer Wahl (siehe auch
-[Grundlagen des Linx Terminals](Grundlagen-des-Linux-Terminals#erste-schritte)).
+[Grundlagen des Linux Terminals](Grundlagen-des-Linux-Terminals#erste-schritte)).
 Dort fügen wir bei `compiler.c.elf.flags` vor den bereits vorhandenen Optionen
 `-Wl,-gc-sections` die neuen Optionen
 
@@ -89,7 +89,7 @@ static FILE serial_stdout;
 
 /* Der Code in der setup-Funktion wird genau einmal ausgeführt. */
 void setup () {
-  /* Intialisiere Konsole mit der Datenrate von 9600 Bits pro Sekunde. */
+  /* Initialisiere Konsole mit der Datenrate von 9600 Bits pro Sekunde. */
   Serial.begin (9600);
   /* Wir warten bis die USB-Verbindung besteht. */
   while (!Serial) { /* warten */ }
