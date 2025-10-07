@@ -158,6 +158,14 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
    amortisiert sich bei regelmäßiger Nutzung innerhalb von Tagen.
    Wenn Sie in `vim` per Tastenkombination und auswendig ein beliebiges
    Rechteck markieren, löschen und einfügen können, haben Sie es geschafft.
+   Wenn es nur um das Anzeigen von (Text-)Dateien geht, können Sie auch einen
+   sogenannten Pager statt eine Editor verwenden.
+   Ein solches Programm ist zum Beispiel `less`.
+   Es hat den Vorteil, dass große Dateien nicht komplett in den Speicher geladen
+   werden.
+   Sie finden per `man less` oder in dieser
+   [deutschen Erklärung](https://wiki.ubuntuusers.de/less/) mehr Informationen
+   zu `less`.
 
 7. Benennen Sie die Datei nun in file-with-a-new-name.txt um. Dafür verwenden
    Sie
