@@ -12,14 +12,14 @@ willkommen.
 # Was ist Programmieren?
 
 Programmieren bedeutet das Schreiben eines Programms in einer bestimmten
-Programmiersprache und im Weiteren Sinne auch das Ausführen, Testen,
+Programmiersprache und im weiteren Sinne auch das Ausführen, Testen,
 Untersuchen, Dokumentieren und Verbessern des Programms.
 Ein Programm ist also etwas Ausführbares.  Beispiele:
 
  - Ein Kochrezept im Buch wird von Menschen ausgeführt.
    Die Programmiersprache ist hier nicht klar definiert, sie muß nur von den
    meisten Menschen im gleichen Sinne verstanden werden können.
-   Menschliche Sprachen erüllen diese Anforderung im Regelfall.
+   Menschliche Sprachen erfüllen diese Anforderung im Regelfall.
  - Ein Kochrezept für eine Küchenmaschine wird von dieser ausgeführt.
    Dazu muß das Rezept ganz genau im für diese Maschine spezifizierten Format
    digital eingegeben werden.
@@ -247,7 +247,7 @@ verdoppelt wird durch Addition zu sich selbst, und mal drei genommen durch
 Addieren dieses Ergebnisses.
 (Was passiert aber, wenn wir die 2 und 3 durch andere Zahlen ersetzen?)
 
-Den Assembly-Code könnnen wir jetzt in eine ausführbare Datei wandeln mit
+Den Assembly-Code können wir jetzt in eine ausführbare Datei wandeln mit
 
     gcc -Wall -o first_compile first_compile.s
 
