@@ -23,8 +23,8 @@ Sie können die Datei finden in dem Sie in Ihrem Home-Verzeichnis nach ihr suche
 oder Sie finden den Ort heraus in dem Sie die ausführliche Compiler-Ausgabe
 in der Arduino IDE aktivieren.
 
-Das Suchen können Sie unter Linux zum Beispiel mit dem Befehl `find`
-per
+Das Suchen können Sie unter Linux zum Beispiel mit dem Befehl `find` (siehe auch
+[hier](Grundlagen-des-Linux-Terminals#erste-schritte)) per
 
        find ~ -type f -name 'platform.txt'
 

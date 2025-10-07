@@ -185,6 +185,41 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
 
    löschen.
 
+9. Wenn wir Dateien suchen, können wir den Befehl `find` verwenden.
+   Wir legen uns hierfür einen kleinen Übungsordner an:
+
+       mkdir -p find-playground/{docs,logs}
+       touch find-playground/docs/readme.txt \
+             find-playground/docs/todo.txt \
+             find-playground/logs/app.log
+
+    wobei `-p` es uns ermöglicht das Eltern-Verzeichnis automatisch
+    mitzuerstellen – nutzen Sie `mkdir --help`, um mehr über die Option `-p`
+    zu erfahren.
+    Außerdem ist `{docs,logs}` eine sogenannte *brace expression*.
+    Sie lässt die Shell zwei Aufrufe mit `find-playground/docs` und
+    `find-playground/logs` erzeugen.
+    Den Befehl `touch` nutzen wir hier, um leere Dateien zu erstellen.
+    Schauen Sie sich den Befehl gerne mit `man touch` genauer an.
+
+    Nun können wir `find` in unserem Übungsordner verwenden.
+
+   a) Alle `.txt`-Dateien unterhalb von `find-playground` auflisten:
+
+       find find-playground -type f -name "*.txt"
+
+   b) Dateien der letzten 5 Minuten finden:
+
+       find find-playground -type f -mmin -5
+
+   c) Aufräumen:
+
+       rm -r find-playground
+
+   Es gibt noch deutlich mehr Optionen und Funktionalitäten von `find`.
+   Hierfür können Sie sich `man find` oder auch diese
+   [deutsche Erklärung](https://wiki.ubuntuusers.de/find/#Aufruf) anschauen.
+
 ## Tipps und Tricks
 
  - Um lange Befehle nicht mehrmals eingeben zu müssen, kann man mit den
