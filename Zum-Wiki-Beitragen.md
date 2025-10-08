@@ -3,6 +3,12 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
 
 # Setup
 
+Ein git Repository ist eine identisch replizierbare Sammlung von Inhalten
+mit Historie.  Die Historie ist durch kryptographische Hash-Funktionen
+zurückzuverfolgen und nicht fälschbar.  Jede Kopie eines Repositories ist
+vollständig, und welches Repository momentan offiziell ist, ist lediglich
+eine soziale Konvention.
+
 1. Erstellen Sie einen kostenlosen [Github Account](https://github.com/signup).
 
 2. Zum Bearbeiten des Wiki-Inhalts gibt es ein separates Repository.
@@ -10,6 +16,14 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
    Falls nicht bereits automatisch geschehen, tragen Sie als Owner den eigenen Github-Account ein.
 
 # Einen Beitrag erstellen
+
+Es gibt verschiedene Wege, die Inhalte zu bearbeiten.
+Sie arbeiten in der Regel an einer eigenen Kopie des Repositories und
+beantragen dann per Web-Interface, daß Ihre Änderungen in das offizielle
+Repository übernommen werden.  Änderungen am offiziellen Repository (z. B.
+durch andere) pflegen Sie regelmäßig in ihrer eigenen Kopie ein.
+
+## Bearbeiten per Web-Interface
 
 1. Melden Sie sich bei Github an und öffnen Sie Ihren Fork des Daten-Repository.
 
@@ -50,6 +64,43 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
     Sie dann direkt per Mail oder über den enthaltenen Github-Link beantworten.
     Sobald alle Fragen geklärt sind werden die Änderungen bald in das Wiki
     eingebunden.
+
+## Bearbeiten im eigenen Dateisystem
+
+Sie können von unserem offiziellen Repository auf
+github per Kommandozeile eine lokale Kopie erstellen und auch die Inhalte
+Ihres Forks hinzuziehen.  Siehe hierzu `man git-clone` und `mat git-fetch`.
+In der Verzeichnisstruktur liegen verschiedene Markdown-Dateien mit Endung
+`.md`.  Diese editieren Sie mit einem Editor Ihrer Wahl und erstellen so
+eine lokale git-Historie in einer sinnvoll benannten branch (z.  B.
+update-wiki-beitragen).  Diese laden Sie dann auf Ihren Fork bei github hoch
+(siehe `man git-push`), worauf das Web-Interface Ihnen die Möglichkeit
+anbietet, einen Pull-Request zu erstellen wie oben.
+
+Eine Vorschau in `html` generieren Sie z. B. per
+
+    pandoc Zum-Wiki-beitragen.md -o test.htm
+    firefox test.htm &
+
+Damit von `git status` nicht die generierte html-Datei angezeigt wird, und
+damit Sie diese nicht aus Versehen ins Repository hinzufügen, empfiehlt es
+sich, in der Datei in Ihrem Homeverzeichnis `~/.git/info/exclude` den
+Eintrag
+
+    *.htm
+
+hinzuzufügen.  Je nachdem was Sie bearbeiten, sollten auch Hilfsdateien für
+LaTeX, generierter Object-Code, etc. *nicht* im Repository gesichert werden.
+Damit Ihr Name und Ihre Email-Adresse von `git commit` korrekt eingetragen
+werden, empfiehlt es sich, auf jedem Arbeitsrechner die Datei `~/.gitconfig`
+entsprechend (und gleichlautend) zu befüllen.
+
+Das lokale Repository dient gleichzeitig als Backup und als Plattform zur
+Offline-Arbeit.  Wenn Sie mehrere Rechner benutzen, auf denen jeweils ein
+halbwegs aktuelles lokales Repository liegt, haben Sie mehrere Backups zur
+Verfügung und sind recht sicher geschützt vor Datenverlust.  Außerdem sind
+alle Inhalte identisch bis zum jüngsten `git fetch` unabhängig vom aktuell
+genutzten Arbeitsrechner.
 
 # Markdown
 
