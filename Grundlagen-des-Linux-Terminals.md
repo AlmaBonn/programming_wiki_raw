@@ -192,12 +192,12 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
 
        rm file-with-a-new-name.txt
 
-  > [!CAUTION]
-  > Der im folgenden beschriebene Befehl zum Löschen von Ordnern
-  > sollte nur in Kombination mit einem validen Ordner-Namen und mit Vorsicht
-  > genutzt werden.
-  > Der Befehl `rm -rf /` kann zum Beispiel je nach vorhandenen Berechtigungen
-  > unwiderruflich das gesamte Dateisystem löschen.
+       > [!CAUTION]
+       > Der im folgenden beschriebene Befehl zum Löschen von Ordnern
+       > sollte nur in Kombination mit einem validen Ordner-Namen und mit Vorsicht
+       > genutzt werden.
+       > Der Befehl `rm -rf /` kann zum Beispiel je nach vorhandenen Berechtigungen
+       > unwiderruflich das gesamte Dateisystem löschen.
 
    Anschließend können Sie wieder in den Ursprungsordner zurückkehren und auch
    den neu erstellten Ordner example-directory mit
