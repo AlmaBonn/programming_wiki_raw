@@ -4,11 +4,6 @@ Es gibt eine riesige Anzahl an Büchern und sonstigen Dokumenten zum
 Programmieren, in C oder ganz allgemein.  Es ist also im Grunde eine komplette
 Verschwendung, noch eins zu schreiben.  Ein kleines folgt hier trotzdem.
 
-Da der folgende Text praktisch und bildlich auch den einzelnen Menschen erfaßt,
-nicht nur eine abstrakte Rolle, wähle ich als ursprüngliche neutrale Form das
-generische Maskulinum.  Bitte fühlen Sie sich alle, wirklich alle, herzlich
-willkommen.
-
 # Was ist Programmieren?
 
 Programmieren bedeutet das Schreiben eines Programms in einer bestimmten
