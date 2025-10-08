@@ -28,10 +28,9 @@ in der Arduino IDE aktivieren.
 Das Suchen können Sie unter Linux zum Beispiel mit dem Befehl `find` (siehe auch
 [hier](Grundlagen-des-Linux-Terminals#erste-schritte)) per
 
-       find ~ -type f -name 'platform.txt'
+       find ~ -name 'platform.txt'
 
-realisieren. Dieser Befehl sucht in Ihrem Home-Verzeichnis nach Dateien mit dem
-Namen `platform.txt`.
+realisieren. Dieser Befehl sucht in Ihrem Home-Verzeichnis nach `platform.txt`.
 
 Als Alternative können Sie die ausführliche Compiler-Ausgabe in der Arduino IDE
 aktivieren in dem Sie auf **File** und dann dort auf **Preferences** klicken.

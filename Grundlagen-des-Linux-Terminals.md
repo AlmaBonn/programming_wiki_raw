@@ -229,6 +229,15 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
 
           find find-playground -type f -name "*.txt"
 
+      wobei `-type f` nur nötig ist, wenn Sie die Ergebnisse auf reguläre
+      Dateien beschränken möchte.
+      Das heißt zum Beispiele keine Verlinkungen (symlink) oder Verzeichnisse
+      in den Suchresultaten zu haben.
+      Wenn Sie mehr Suchresultate nicht stören oder
+      Sie sich sicher sind, mit dem Suchmuster nur reguläre Dateien zu finden,
+      ist die Option nicht nötig.
+      In unserem Beispiel macht diese Option keinen Unterschied.
+
    b) Dateien der letzten 5 Minuten finden:
 
           find find-playground -type f -mmin -5
