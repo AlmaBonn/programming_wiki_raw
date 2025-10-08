@@ -248,7 +248,7 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
    oben für den nächstälteren und nach unten für den nächstjüngeren Befehl) und
    erneut mit Enter bestätigen.
 
-   Für Befehle, die schon etwas länger zurückliegen bietet sich die
+   Für Befehle, die schon etwas länger zurückliegen, bietet sich die
    Rückwärtssuche mit `Strg + R` an.
 
  - Um lange Namen, zum Beispiel von Ordnern oder Dateien, nicht aufwendig und
@@ -266,6 +266,12 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
   - Um im Terminal langes hochscrollen zu vermeiden, können Sie auch mit der
     Tastenkombination `Shift + PageUp` sukzessive durch den Terminalverlauf
     durchgehen.
+
+  - Mit der Maus kann man beliebigen Text markieren und direkt am Ort des
+    Mauszeigers mit der Mitteltaste pasten.  Ein Umständliches `Ctrl-V` etc.
+    ist nicht nötig, funktioniert aber mit separatem Textpuffer auch.  Wenn
+    der Editor dies blockiert, kann man das freischalten, in `vim` z. B. mit
+    `:set mouse=`.
 
 ## Die Manual Page
 
