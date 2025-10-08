@@ -1,7 +1,9 @@
-Auf dem Mikrochip wird standardmäßig die `printf`-Funktion nicht unterstützt.
-Diese Funktion ist sehr nützlich, wenn Sie Variablenwerte in einem String
+Auf dem Mikrochip wird standardmäßig die `printf`-Funktion nicht für das
+Ausgeben von `float` und `double` unterstützt und die Funktion gibt ohne weitere
+Anpassungen nicht nach `Serial` aus.
+Die `printf`-Funktion ist sehr nützlich, wenn Sie Variablenwerte in einem String
 ausgeben lassen wollen. Daher zeigen wir auf dieser Wiki-Seite wie Sie die
-Funktion `printf` wie in C üblich verwenden zu können.
+Funktion `printf` wie in C üblich verwenden können.
 
 # Anpassen der Linking-Optionen
 
@@ -11,9 +13,9 @@ ist dafür verantwortlich verschiedene Compiler-Ergebnisse miteinander zu
 *verlinken*. So sorgt er beispielsweise dafür, dass wir Funktionen aus
 Softwarebibliotheken aufrufen können.
 Für `printf` müssen wir nun Linking-Befehle hinzufügen, um sicherzustellen, dass
-die Funktion `printf` funktioniert. Dies ist nötig, da standardmäßig für
-Mikrochips aufgrund ihres limitierten Speicherplatzs das kompilierte
-Programm so klein wie möglich gehalten wird.
+die Funktion `printf` auch Fließkommazahlen ausgeben kann.
+Dies ist nötig, da standardmäßig für Mikrochips aufgrund ihres limitierten
+Speicherplatzs das kompilierte Programm so klein wie möglich gehalten wird.
 
 ## Finden von `platform.txt`
 
