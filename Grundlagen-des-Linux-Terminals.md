@@ -21,6 +21,9 @@ vom Programm als spezielle Schalter interpretiert.  Jedes Programm macht das
 anders; idealerweise steht die Konvention auf seiner man-Page (s. u.).  Die
 Shell sucht dann das Programm dieses Namens im Dateisystem und führt es aus.
 
+ - Wenn man wissen möchte, wo im Dateisystem die Shell ein bestimmtes
+   Programm findet, tippt man z. B. `which python`.
+
  - Ein wichtiges Program ist zum Beispiel `man`.  Es greift auf eine Datenbank
    an Hilfen zu den meisten Programmen zu und zeigt diese an.  Das gesuchte
    Programm ist als Argument anzugeben.  Probieren Sie also einmal `man man`,
@@ -28,6 +31,15 @@ Shell sucht dann das Programm dieses Namens im Dateisystem und führt es aus.
 
  - Ein weiteres Program ist `echo`.  Es gibt alle Argumente auf den Bildschirm
    aus, probieren Sie `echo abc`.
+
+ - Ein Pager zeigt eine Datei am Bildschirm an und ermöglicht das Scrollen
+   und Suchen darin.  Ein beliebter Pager ist `less`, der z. B. implizit von
+   `man` aufgerufen wird.  Probieren Sie einmal
+
+       find .
+       find /usr/share/doc | less
+
+   Navigieren Sie per Tastatur und quittieren sie den Pager wieder mit `q`.
 
 Die Shell versteht tatsächlich eine ganze Programmiersprache, da ist ein
 Programmaufruf nur ein Spezialfall.  Variablen werden ohne Leerzeichen
@@ -180,12 +192,12 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
 
        rm file-with-a-new-name.txt
 
-  > [!CAUTION]
-  > Der im folgenden beschriebene Befehl zum Löschen von Ordnern
-  > sollte nur in Kombination mit einem validen Ordner-Namen und mit Vorsicht
-  > genutzt werden.
-  > Der Befehl `rm -rf /` kann zum Beispiel je nach vorhandenen Berechtigungen
-  > unwiderruflich das gesamte Dateisystem löschen.
+       > [!CAUTION]
+       > Der im folgenden beschriebene Befehl zum Löschen von Ordnern
+       > sollte nur in Kombination mit einem validen Ordner-Namen und mit Vorsicht
+       > genutzt werden.
+       > Der Befehl `rm -rf /` kann zum Beispiel je nach vorhandenen Berechtigungen
+       > unwiderruflich das gesamte Dateisystem löschen.
 
    Anschließend können Sie wieder in den Ursprungsordner zurückkehren und auch
    den neu erstellten Ordner example-directory mit
@@ -215,15 +227,15 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
 
    a) Alle `.txt`-Dateien unterhalb von `find-playground` auflisten:
 
-       find find-playground -type f -name "*.txt"
+          find find-playground -type f -name "*.txt"
 
    b) Dateien der letzten 5 Minuten finden:
 
-       find find-playground -type f -mmin -5
+          find find-playground -type f -mmin -5
 
    c) Aufräumen:
 
-       rm -r find-playground
+          rm -r find-playground
 
    Es gibt noch deutlich mehr Optionen und Funktionalitäten von `find`.
    Hierfür können Sie sich `man find` oder auch diese
@@ -236,7 +248,7 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
    oben für den nächstälteren und nach unten für den nächstjüngeren Befehl) und
    erneut mit Enter bestätigen.
 
-   Für Befehle, die schon etwas länger zurückliegen bietet sich die
+   Für Befehle, die schon etwas länger zurückliegen, bietet sich die
    Rückwärtssuche mit `Strg + R` an.
 
  - Um lange Namen, zum Beispiel von Ordnern oder Dateien, nicht aufwendig und
@@ -254,6 +266,12 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
   - Um im Terminal langes hochscrollen zu vermeiden, können Sie auch mit der
     Tastenkombination `Shift + PageUp` sukzessive durch den Terminalverlauf
     durchgehen.
+
+  - Mit der Maus kann man beliebigen Text markieren und direkt am Ort des
+    Mauszeigers mit der Mitteltaste pasten.  Ein Umständliches `Ctrl-V` etc.
+    ist nicht nötig, funktioniert aber mit separatem Textpuffer auch.  Wenn
+    der Editor dies blockiert, kann man das freischalten, in `vim` z. B. mit
+    `:set mouse=`.
 
 ## Die Manual Page
 
