@@ -21,6 +21,9 @@ vom Programm als spezielle Schalter interpretiert.  Jedes Programm macht das
 anders; idealerweise steht die Konvention auf seiner man-Page (s. u.).  Die
 Shell sucht dann das Programm dieses Namens im Dateisystem und führt es aus.
 
+ - Wenn man wissen möchte, wo im Dateisystem die Shell ein bestimmtes
+   Programm findet, tippt man z. B. `which python`.
+
  - Ein wichtiges Program ist zum Beispiel `man`.  Es greift auf eine Datenbank
    an Hilfen zu den meisten Programmen zu und zeigt diese an.  Das gesuchte
    Programm ist als Argument anzugeben.  Probieren Sie also einmal `man man`,
@@ -28,6 +31,15 @@ Shell sucht dann das Programm dieses Namens im Dateisystem und führt es aus.
 
  - Ein weiteres Program ist `echo`.  Es gibt alle Argumente auf den Bildschirm
    aus, probieren Sie `echo abc`.
+
+ - Ein Pager zeigt eine Datei am Bildschirm an und ermöglicht das Scrollen
+   und Suchen darin.  Ein beliebter Pager ist `less`, der z. B. implizit von
+   `man` aufgerufen wird.  Probieren Sie einmal
+
+       find .
+       find /usr/share/doc | less
+
+   Navigieren Sie per Tastatur und quittieren sie den Pager wieder mit `q`.
 
 Die Shell versteht tatsächlich eine ganze Programmiersprache, da ist ein
 Programmaufruf nur ein Spezialfall.  Variablen werden ohne Leerzeichen
@@ -215,15 +227,15 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
 
    a) Alle `.txt`-Dateien unterhalb von `find-playground` auflisten:
 
-       find find-playground -type f -name "*.txt"
+          find find-playground -type f -name "*.txt"
 
    b) Dateien der letzten 5 Minuten finden:
 
-       find find-playground -type f -mmin -5
+          find find-playground -type f -mmin -5
 
    c) Aufräumen:
 
-       rm -r find-playground
+          rm -r find-playground
 
    Es gibt noch deutlich mehr Optionen und Funktionalitäten von `find`.
    Hierfür können Sie sich `man find` oder auch diese
