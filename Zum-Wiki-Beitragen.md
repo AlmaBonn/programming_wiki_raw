@@ -4,8 +4,10 @@ Um zum Wiki beizutragen, muss einmalig das Setup durchgeführt werden, bevor man
 # Setup
 
 Ein git Repository ist eine identisch replizierbare Sammlung von Inhalten
-mit Historie.  Jede Kopie eines Repositories ist vollständig, und welches
-Repository momentan offiziell ist, ist lediglich eine soziale Konvention.
+mit Historie.  Die Historie ist durch kryptographische Hash-Funktionen
+zurückzuverfolgen und nicht fälschbar.  Jede Kopie eines Repositories ist
+vollständig, und welches Repository momentan offiziell ist, ist lediglich
+eine soziale Konvention.
 
 1. Erstellen Sie einen kostenlosen [Github Account](https://github.com/signup).
 
@@ -80,11 +82,25 @@ Eine Vorschau in `html` generieren Sie z. B. per
     pandoc Zum-Wiki-beitragen.md -o test.htm
     firefox test.htm &
 
+Damit von `git status` nicht die generierte html-Datei angezeigt wird, und
+damit Sie diese nicht aus Versehen ins Repository hinzufügen, empfiehlt es
+sich, in der Datei in Ihrem Homeverzeichnis `~/.git/info/exclude` den
+Eintrag
+
+    *.htm
+
+hinzuzufügen.  Je nachdem was Sie bearbeiten, sollten auch Hilfsdateien für
+LaTeX, generierter Object-Code, etc. *nicht* im Repository gesichert werden.
+Damit Ihr Name und Ihre Email-Adresse von `git commit` korrekt eingetragen
+werden, empfiehlt es sich, auf jedem Arbeitsrechner die Datei `~/.gitconfig`
+entsprechend (und gleichlautend) zu befüllen.
+
 Das lokale Repository dient gleichzeitig als Backup und als Plattform zur
 Offline-Arbeit.  Wenn Sie mehrere Rechner benutzen, auf denen jeweils ein
 halbwegs aktuelles lokales Repository liegt, haben Sie mehrere Backups zur
 Verfügung und sind recht sicher geschützt vor Datenverlust.  Außerdem sind
-alle Inhalte identisch unabhängig vom aktuellen genutzten Arbeitsrechner.
+alle Inhalte identisch bis zum jüngsten `git fetch` unabhängig vom aktuell
+genutzten Arbeitsrechner.
 
 # Markdown
 
