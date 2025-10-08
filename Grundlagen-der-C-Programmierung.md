@@ -60,9 +60,11 @@ Hier ist der Parameter '5', die gewünschte Anzahl Apfelstücke, im Programm
 *hardgecodet*.  Es gibt andere Anweisungen, die diesen Parameter aus einem
 Notizzettel lesen, den man vorher aus dem Kochbuch herausgeschrieben hat.
 Solche Notizen würden wir auch als Register bezeichnen.
+Alle Ablageorte werden direkt mit Ihrer Adresse (im Keller oder auf dem
+Tisch) bezeichnet, Variablennamen gibt es nicht.
 
 Der Kochtopf ist ein Unterprogramm, das der Nutzer entweder selbst geschrieben
-hat, oder das schon mitgeliefert war.  Es ist hier nicht nötig zu wissen, wie
+hat oder das schon mitgeliefert war.  Es ist hier nicht nötig zu wissen, wie
 es funktioniert, nur die Parameter müssen dokumentiert sein: die Temperatur,
 Kochdauer, und wohin das Ergebnis gespeichert werden soll.  Eine
 Programmiersprache wie hier beschrieben heißt sinnigerweise Assembler.
@@ -85,7 +87,7 @@ werden dürfen, und auf denen direkt operiert wird.  Wichtig für uns sind:
  - `unsigned char` ist die nicht-negative Variante von einem Byte Speicher,
    der Wertebereich ist also 0 bis 255.
  - `float` ist eine Fließkommazahl mit 4 Bytes oder 32 Bits Speicherbreite.
-   In diesen wird eine Ganzzahl und ein Exponent zur Basis 2 untergebracht.
+   In diesen werden eine Ganzzahl und ein Exponent zur Basis 2 untergebracht.
 
 Wir können also eine ganze Menge an Zahlen darstellen.  Buchstaben werden nach
 dem 7-Bit
@@ -96,8 +98,8 @@ Wenn man in C Zeichenketten in doppelten (!) Anführungszeichen definiert, wird
 jeder Buchstabe automatisch in seine Zahl umgesetzt.  Sonderzeichen erzeugt man
 durch sogenannte Escape-Sequenzen, wie zum Beispiel `\n` für eine neue Zeile.
 Zeichen wie Umlaute, Smileys etc. werden kodiert als Obermenge von 7-Bit ASCII
-über den
-[Unicode](https://de.wikipedia.org/wiki/Unicode)
+über
+[UTF-8](https://de.wikipedia.org/wiki/Unicode)
 durch Sequenzen von bis zu vier Bytes.
 
 Es empfiehlt sich, immer den kleinstmöglichen Wertetyp zu wählen, und immer
@@ -119,7 +121,10 @@ Beispielsweise gibt es die folgenden, vorausgesetzt a und b sind definiert:
 
  - `a ++` addiert 1 zur Variablen a, Rückgabewert wird vergessen.
  - `b = a ++` addiert 1 zu a und weist den vorherigen Wert b zu.
- - `b = ++ a` addiert 1 zu a und weist das Ergebnis b zu.
+   Gemäß der Sprachgrammatik bindet `++` stärker als `=` und greift zuerst.
+   Der Rückgabewert der Zuweisung `=` wird vergessen.
+ - `c = b = ++ a` addiert 1 zu a und weist das Ergebnis b und auch c zu.
+   Der Rückgabewert der Zuweisung `=` ganz links wird vergessen.
 
 Um mehrere Operatoren in derselben Anweisung zu verwenden, muß ihre Präzedenz
 und Assoziativität definiert werden.  Dies kann man
@@ -127,7 +132,7 @@ und Assoziativität definiert werden.  Dies kann man
 nachlesen.  Der Operator `=` assoziiert beispielsweise von rechts nach links,
 also weist
 
-    a = b = c;
+    a = b = c
 
 erst b den Wert von c zu und dann a den gerade berechneten Wert von (b = c),
 also b nach der Operation, gleich c sowohl vorher als auch nachher.
@@ -160,6 +165,17 @@ Zwei vollständige Funktionsdeklarationen sind zum Beispiel
 
     void machnichts (void) {}
     int summe (int a, int b) { return a + b; }
+
+Wir können eine zweite Variable mit der Funktion `machnichts` belegen, dabei
+wird nicht der Körper dupliziert sondern nur ihre Adresse.  Rückgabewert und
+Übergabeparameter müssen übereinstimmen, sind also Teil des Typs dieser
+Funktionen.
+
+    void (*machkopie) (void) = machnichts;
+
+Wir sehen hier ein Semikolon, dieses macht aus dem Ausdruck davor (mit
+vergessenem Rückgabewert der Zuweisung `=`) eine Anweisung (einen Schritt im
+Programm), die keinen Wert hat.
 
 Globale Variablen werden außerhalb einer Funktion definiert und sind überall im
 Programm sichtbar, lokale Variablen sind innerhalb eines `{ ... }` Blocks
@@ -246,7 +262,7 @@ Den Assembly-Code können wir jetzt in eine ausführbare Datei wandeln mit
 
     gcc -Wall -o first_compile first_compile.s
 
-Der Name der neuen ausführbaren Datei wird nach dem `-o`-Switch angegeben.
+Der Name der neuen ausführbaren Datei wird nach dem `-o` Argument angegeben.
 Diese können wir aufrufen mit
 
     ./first_compile
