@@ -6,6 +6,8 @@ Achten Sie bitte darauf, diese Fehler zu vermeiden!
   > Wer seinen Chip kaputtmacht, kauft bitte selbständig einen neuen.
 
 Das kostet etwa vier Dollar im Internet, dauert aber leider etwas.
+Das Board heißt meistens "UBS Beetle" und es ist wichtig, dass der Chip wirklich
+"ATMega32U4" ist.
 
 ## Überschreiben der Main-Funktion
 
