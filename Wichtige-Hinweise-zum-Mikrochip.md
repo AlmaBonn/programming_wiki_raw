@@ -39,26 +39,30 @@ Daher ist dieser Ansatz für unsere Chips *nicht* empfohlen.
 Arbeiten Sie sicherheitshalber lieber mit Allokationen, deren Größe zum Zeitpunkt
 des Compilerens bekannt sind, also mit
 
-    /* Die Aufgabe muß auch für Größe 0 wohldefiniert sein! */
-    void aufgabe_der_groesse_M (int r[], int M) {
-        unsigned char j;
-        unsigned long microseconds = micros ();
+```c
+/* Die Aufgabe muß auch für Größe 0 wohldefiniert sein! */
+void aufgabe_der_groesse_M(int r[], int M) {
+    unsigned char j;
+    unsigned long microseconds = micros();
 
-        /* loese die Aufgabe der Groesse M */
+    /* loese die Aufgabe der Groesse M */
+    if (M > 0) {  // Prüfe, ob M größer 0 ist, um Fehler zu vermeiden
         for (j = 0; j < M; ++j) {
             r[j] = j + 17;
         }
-
-        microseconds = micros () - microseconds;
-        /* Berichte über die Ergebnisse der Aufgabe der Größe M inkl. Laufzeit */
     }
 
-    /* Definiere die globale Variable r mit bekannter Speichergröße */
-    #define N 8
-    int ri[N];
+    microseconds = micros() - microseconds;
+    /* Berichte über die Ergebnisse der Aufgabe der Größe M inkl. Laufzeit */
+}
 
-    /* Aufsetzen der Testreihe beispielsweise eingefügt am Ende von setup() */
-    unsigned char Mi;
-    for (Mi = 0; Mi < N; ++Mi) {
-        aufgabe_der_groesse_M (ri, Mi);
-    }
+/* Definiere die globale Variable r mit bekannter Speichergröße */
+#define N 8
+int ri[N];
+
+/* Aufsetzen der Testreihe beispielsweise eingefügt am Ende von setup() */
+unsigned char Mi;
+for (Mi = 0; Mi < N; ++Mi) {
+    aufgabe_der_groesse_M(ri, Mi);
+}
+```
