@@ -39,7 +39,7 @@ Daher ist dieser Ansatz für unsere Chips *nicht* empfohlen.
 Arbeiten Sie sicherheitshalber lieber mit Allokationen, deren Größe zum Zeitpunkt
 des Compilerens bekannt sind, also mit
 
-    /* Die aufgabe muß auch für Größe 0 wohldefiniert sein! */
+    /* Die Aufgabe muß auch für Größe 0 wohldefiniert sein! */
     void aufgabe_der_groesse_M (int r[], int M) {
         unsigned char j;
         unsigned long microseconds = micros ();
@@ -53,10 +53,12 @@ des Compilerens bekannt sind, also mit
         /* Berichte über die Ergebnisse der Aufgabe der Größe M inkl. Laufzeit */
     }
 
-    /* Aufsetzen der Testreihe beispielsweise eingefügt am Ende von setup() */
+    /* Definiere die globale Variable r mit bekannter Speichergröße */
     #define N 8
-    int r[N];
+    int ri[N];
+
+    /* Aufsetzen der Testreihe beispielsweise eingefügt am Ende von setup() */
     unsigned char Mi;
     for (Mi = 0; Mi < N; ++Mi) {
-        aufgabe_der_groesse_M (r, Mi);
+        aufgabe_der_groesse_M (ri, Mi);
     }
