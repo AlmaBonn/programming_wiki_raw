@@ -2,8 +2,8 @@ Es gibt Programmierfehler, die dazu führen
 können, dass die Mikrochips dauerhaft nicht mehr funktionieren.
 Achten Sie bitte darauf, diese Fehler zu vermeiden!
 
-    > [!CAUTION]
-    > Wer seinen Chip kaputtmacht, kauft bitte selbständig einen neuen.
+  > [!CAUTION]
+  > Wer seinen Chip kaputtmacht, kauft bitte selbständig einen neuen.
 
 Das kostet etwa vier Dollar im Internet, dauert aber leider etwas.
 
