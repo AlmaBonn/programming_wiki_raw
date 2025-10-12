@@ -9,7 +9,7 @@ USB-Ansteuerung hineinschreiben.
 
 Die Mikrochips verfügen über die eingebaute Funktionalität, den internen
 Programmspeicher neu zu beschreiben.  Dies geschieht über elektrische
-Ansteuerung nach der ISP-Methode.  Eine zweite Methode, die High-Voltage
+Ansteuerung nach der ISP-Methode.  Eine zweite Methode, die High-Voltage (HV)
 Programmierung mit 12V, steht uns nur im Prinzip zur Verfügung, da wir dafür
 fast alle 32 Beinchen des Chips verdrahten müßten, was sich dann wirklich nicht
 mehr lohnt.  Die hier vorgestellte Methode ist dagegen machbar und lehrreich.
@@ -48,7 +48,8 @@ kopieren wir heraus in ein Skript, lesen die Dokumentation zu den Argumenten
 von `avrdude` und ersetzen einige Argumente des Aufrufs so, daß wir das Flash
 und die drei Fuses aus dem funktionierenden Chip lesen und lokal abspeichern.
 Achtung auch hier, da man mit falschen Optionen an `avrdude` den Chip
-*wirklich* permanent stillegen kann (Stichwort Reset-Pin).
+*wirklich* permanent stillegen kann (Stichwort Reset-Pin/SPI disable, Abhilfe
+dann nur noch per HV).
 
 ## Beschreiben eines scheintoten Chips
 
@@ -78,6 +79,9 @@ suchen wir wieder die `avrdude`-Kommandozeile und kopieren sie in ein Skript.
 Nun werden im Skript die Kommandozeilen-Optionen von `avrdude` so geändert, daß
 die vorher gesicherten lokalen Dateien in den Chip geschrieben werden.
 Aufrufen, fertig.  Der Chip funktioniert jetzt wieder über USB.
+Natürlich sollten sie den Programmer abstecken, bevor Sie den Chip wieder per
+USB anstecken, sonst konkurrieren die beiden Spannungsversorgungen und der Chip
+könnte überhitzen.  Dann ist er möglicherweise *endgültig* kaputt.
 
 Es kann sein, daß dieser letzte Schritt gar nicht nötig ist und der USB-Code
 bereits im ersten Upload wieder an seinen Platz kommt.  Das würde bedeuten, das
