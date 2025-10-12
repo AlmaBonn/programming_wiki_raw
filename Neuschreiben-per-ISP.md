@@ -1,9 +1,9 @@
 
-Sollten Sie die mitgelieferte Main-Funktion oder den USB-Speicher Ihres Chips
+Sollten Sie die mitgelieferte Main-Funktion oder die USB-Logik Ihres Chips
 überschrieben haben, ist nicht aller Tage Abend.
 Der Chip reagiert zwar nicht mehr richtig am USB-Anschluß, ist aber noch voll
 funktionsfähig.  Wir müssen lediglich wieder ein Programm mit funktionierender
-USB-Logik hineinschreiben.
+USB-Ansteuerung hineinschreiben.
 
 # Reset der Chips per Hardware
 
@@ -19,7 +19,7 @@ mehr lohnt.  Die hier vorgestellte Methode ist dagegen machbar und lehrreich.
 Die folgenden Anweisungen sind nur beispielhaft, und Sie handeln auf eigene
 Verantwortung.  Ihr Risiko ist allerdings vertretbar und soll Sie nicht davon
 abhalten, hier viel auszuprobieren:  Vier Dollar (oder acht, oder zwölf...)
-sind ein guter Preis für soviel an neu erworbenen Fähigkeiten.
+sind ein guter Preis für die neu erworbenen Fähigkeiten.
 
 ## Das ISP Konzept
 

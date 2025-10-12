@@ -32,6 +32,9 @@ Sie können stattdessen die run-Funktion in diesem
 [Beispiel-Code](Einrichten-der-Mikrochips#beispiel-für-ausgangscode) als Ausgangspunkt
 verwenden.
 
+Die mangelhafte main-Funktion liegt im sogenannten Flash-Speicher, der nach
+einem Reboot (aus-/einstecken) erhalten bleibt.  Das Problem ist also permanent.
+
 ## Überschreiben des Betriebs-Speichers
 
 Die Mikrochips haben 2,5kB Arbeitsspeicher, von dem ein Teil für interne
@@ -54,8 +57,10 @@ Fehlfunktionen erzeugt.  Daher ist das Verwenden dynamischen Speichers für
 unsere Chips *nicht* empfohlen.  Es gibt Wege, die nötige Flexibilität auch mit
 statischem Speicher nachzubilden.
 
-Arbeiten Sie sicherheitshalber also mit Allokationen, deren Größe zum Zeitpunkt
-des Compilerens bekannt ist (statische Allokation), zum Beispiel wie folgt.
+Immerhin ist der RAM-Inhalt flüchtig, also reicht es in diesem Fall, den Chip
+einmal aus- und wieder einzustecken.  Arbeiten Sie trotzdem sicherheitshalber
+mit Allokationen, deren Größe zum Zeitpunkt des Compilerens bekannt ist
+(statische Allokation), zum Beispiel wie folgt.
 
 ```c
 /* Die Aufgabe muß auch für Größe 0 wohldefiniert sein. */
@@ -88,6 +93,6 @@ Arduino-Umgebung beim Compilieren angezeigt.
 
 ## Pro-Tip: Hardware-Reflash der Chips
 
-Es gibt natürlich einen Weg, scheintote Chips wiederzubeleben, wenn man keine
-Angst vor Hardware hat.  Siehe hier unsere Bastelanleitung zum
+Es gibt natürlich einen Weg, scheintot geflashte Chips wiederzubeleben, wenn
+man keine Angst vor Hardware hat.  Siehe hierzu unsere Bastelanleitung zum
 [Neuprogrammieren der Chips per ISP](Neuschreiben-per-ISP).
