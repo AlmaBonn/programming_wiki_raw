@@ -12,6 +12,11 @@ Seine Funktion ist vollständig (!) definiert im
 [Datenblatt](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf),
 was für die Vorlesung jedoch kein notwendiges Wissen darstellt.
 
+# Gefahrenquellen beim Programmieren
+
+Es gibt verschiedene Möglichkeiten, das weitere Programmieren der Mikrochips
+über USB zu deaktivieren.
+
 ## Überschreiben der Main-Funktion
 
 Wie Sie wahrscheinlich wissen, hat jedes C-Programm eine main-Funktion
@@ -80,3 +85,9 @@ for (Mi = 0; Mi <= N; ++Mi) {
 
 In diesem Fall bekommt man den belegten Speicher in der Console der
 Arduino-Umgebung beim Compilieren angezeigt.
+
+## Pro-Tip: Hardware-Reflash der Chips
+
+Es gibt natürlich einen Weg, scheintote Chips wiederzubeleben, wenn man keine
+Angst vor Hardware hat.  Siehe hier unsere Bastelanleitung zum
+[Neuprogrammieren der Chips per ISP](Neuschreiben-per-ISP).
