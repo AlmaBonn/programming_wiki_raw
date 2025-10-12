@@ -19,6 +19,9 @@ aufrufen und dann in die Datei
 
 einfügen.
 
+Wenn es Probleme mit der seriellen Schnittstelle über den USB-Anschluß gibt,
+kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
+
 # Erste Schritte nach der Installation
 
 1. Verbinden Sie den Mikrochip über einen USB-Port mit Ihrem Gerät.
