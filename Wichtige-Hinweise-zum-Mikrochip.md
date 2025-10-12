@@ -57,8 +57,11 @@ Fehlfunktionen erzeugt.  Daher ist das Verwenden dynamischen Speichers für
 unsere Chips *nicht* empfohlen.  Es gibt Wege, die nötige Flexibilität auch mit
 statischem Speicher nachzubilden.
 
-Immerhin ist der RAM-Inhalt flüchtig, also reicht es in diesem Fall, den Chip
-einmal aus- und wieder einzustecken.  Arbeiten Sie trotzdem sicherheitshalber
+Immerhin ist der RAM-Inhalt flüchtig, also reicht es theoretisch, den Chip
+einmal aus- und wieder einzustecken.  Allerdings muß man dann *sehr* schnell
+sein, denn bei jedem Einstecken wird der USB-Speicher wieder neu überschrieben.
+
+Arbeiten Sie also sicherheitshalber
 mit Allokationen, deren Größe zum Zeitpunkt des Compilerens bekannt ist
 (statische Allokation), zum Beispiel wie folgt.
 
