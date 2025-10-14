@@ -36,53 +36,31 @@ Dazu brauchen wir
  - eine sechspolige Verbindung zwischen den Anschlüssen des Programmers und den
    namensgleichen der Platine.
 
-## Erstellen sinnvoller Programmierdaten
+## Flashen eines Chips per ISP
 
-Vor dem Beschreiben müssen wir natürlich ein funktionierendes Programm von
-einem normal funktionierenden Chip herunterbekommen, damit wir es auf den
-scheintoten Chip aufspielen können.  Hierzu schalten wir in den
-Arduino-Optionen "verbose" Output beim Upload an und sehen die
-Konsolen-Nachrichten durch.  Dort erscheint beim Upload ein Aufruf des
-Programms `avrdude` mit kompletter (sehr langer) Kommandozeile.  Diesen Aufruf
-kopieren wir heraus in ein Skript, lesen die Dokumentation zu den Argumenten
-von `avrdude` und ersetzen einige Argumente des Aufrufs so, daß wir das Flash
-und die drei Fuses aus dem funktionierenden Chip lesen und lokal abspeichern.
-Achtung auch hier, da man mit falschen Optionen an `avrdude` den Chip
-*wirklich* permanent stillegen kann (Stichwort Reset-Pin/SPI disable, Abhilfe
-dann nur noch per HV).
+Wir stecken den betroffenen Chip aus und den ISP-Programmer in unseren
+Computer ein.  Dann ändern wir in den Optionen der Arduino-Umgebung den
+Programmer auf das entsprechende Programmer-Modell.  Wenn man keinen
+ISP-Programmer kaufen möchte, sondern einen anderen Mikrokontroller mit dem
+ISP-Programmier-Programm beschrieben hat, ist die Option "Arduino as ISP".
 
-## Beschreiben eines scheintoten Chips
+Wir verbinden nun die sechs Anschlüsse des Programmers mit den gleichnamigen
+Anschlüssen der Platine, die wir wiederbeleben wollen.  Es bietet sich an,
+hier eine Buchsenleiste auf die seitliche Sechserreihe zu löten, dann kann
+man dort Drähte einstecken und nach dem Programmieren wieder abziehen.  Wenn
+man ein Arduino-Board als Programmer nutzt, sucht man sich die richtigen
+sechs Positionen in seinen Buchsenleisten zusammen.  Die Verdrahtung ist
+logisch 1:1 (es werden keine Leitungen überkreuzt).
 
-Nun stecken wir den ISP-Programmer in unseren Computer ein und ändern in den
-Optionen der Arduino-Umgebung den Programmer entsprechend auf das Modell des
-ISP-Programmers.  Wenn man keinen ISP-Programmer kaufen möchte, sondern einen
-anderen Mikrokontroller mit dem ISP-Programmier-Programm beschreibt, ist die
-Option "Arduino as ISP".
-Wir verbinden nun die sechs Anschlüsse des Programmers nach dem Bild auf
-Wikipedia für den sechspoligen ISP-Header mit den Anschlüssen der Platine, die
-wir wiederbeleben wollen.  Die Verbindung ist genau 1:1 (es werden keine
-Leitungen überkreuzt):
 Das genutzte Protokoll ist
 [SPI](https://de.wikipedia.org/wiki/Serial_Peripheral_Interface),
 wobei die *SCK*-Leitung das Taktsignal vermittelt, *MO* steht für *MOSI*, also
-*Master Out Slave In*, somit wird dieses Signal direkt verbunden, denn ein Chip
-hat die eine Rolle und der andere die andere.  Gleiches gilt für *MI*, kurz für
-*MISO*.  Die anderen drei Leitungen verbinden Plus, Minus (*GND*) und den
-Reset-Pin.
+*Master Out Slave In*, somit wird dieses Signal zwischen beiden Seiten
+verbunden, denn ein Chip hat die eine Rolle und der andere die andere.
+Gleiches gilt für *MI*, kurz für *MISO*.  Die anderen drei Leitungen
+verbinden Plus (*+5V*), Minus (*GND*) und den Reset-Pin (*RST*).
 
-Die geänderte Programmiermethode (von USB auf ISP) führt zu anderen Argumenten
-von `avrdude`.  Wir öffnen also ein simples Programm in der Arduino-Umgebung und
-uploaden dieses.  Der Chip sollte jetzt bereits wieder funktionieren (und zum
-Beispiel blinken, wenn es das Blink-Beispielprogramm war).  Im Konsole-Output
-suchen wir wieder die `avrdude`-Kommandozeile und kopieren sie in ein Skript.
-
-Nun werden im Skript die Kommandozeilen-Optionen von `avrdude` so geändert, daß
-die vorher gesicherten lokalen Dateien in den Chip geschrieben werden.
-Aufrufen, fertig.  Der Chip funktioniert jetzt wieder über USB.
-Natürlich sollten sie den Programmer abstecken, bevor Sie den Chip wieder per
-USB anstecken, sonst konkurrieren die beiden Spannungsversorgungen und der Chip
-könnte überhitzen.  Dann ist er möglicherweise *endgültig* kaputt.
-
-Es kann sein, daß dieser letzte Schritt gar nicht nötig ist und der USB-Code
-bereits im ersten Upload wieder an seinen Platz kommt.  Das würde bedeuten, das
-vorherige Lesen von Flash und Fuses wäre gar nicht nötig.  YMMV.
+Nun klickt man in der Arduino-Umgebung auf *Burn Bootloader*.  Dies schreibt
+über ISP eine funktionierende USB-Logik und ein Blink-Programm in den Chip.
+Danach kann man den Programmer und die Verkabelung wegpacken und der Chip
+funktioniert wieder am USB-Anschluß, als wäre nichts gewesen.
