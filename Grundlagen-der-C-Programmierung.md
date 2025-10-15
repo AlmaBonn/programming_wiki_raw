@@ -197,7 +197,7 @@ Dies geschieht direkt oder indirekt aus dem Hauptprogramm.
 Die Arduino-Umgebung gibt das Hauptprogramm vor und erwartet, daß sämtliche
 Aufrufe des Anwenders in der `setup()`- oder `loop()`-Funktion geschehen.
 Der Standard-C-Compiler der Kommandozeile hingegen erwartet alle Aufrufe des
-Anwenders innerhalb einer Main-Funktion, die noch geschrieben werden muß:
+Anwenders innerhalb einer main-Funktion, die noch geschrieben werden muß:
 
     #include <stdlib.h>
     int main (void) {

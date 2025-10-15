@@ -17,7 +17,7 @@ was für die Vorlesung jedoch kein notwendiges Wissen darstellt.
 Es gibt verschiedene Möglichkeiten, das weitere Programmieren der Mikrochips
 über USB zu deaktivieren.
 
-## Überschreiben der Main-Funktion
+## Überschreiben der main-Funktion
 
 Wie Sie wahrscheinlich wissen, hat jedes C-Programm eine main-Funktion
 (siehe auch unter [Grundlagen](Grundlagen-der-C-Programmierung#funktionen)).

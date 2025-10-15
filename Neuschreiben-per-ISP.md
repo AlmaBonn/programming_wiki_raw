@@ -1,5 +1,5 @@
 
-Sollten Sie die mitgelieferte Main-Funktion oder die USB-Logik Ihres Chips
+Sollten Sie die mitgelieferte main-Funktion oder die USB-Logik Ihres Chips
 überschrieben haben, ist nicht aller Tage Abend.
 Der Chip reagiert zwar nicht mehr richtig am USB-Anschluß, ist aber noch voll
 funktionsfähig.  Wir müssen lediglich wieder ein Programm mit funktionierender
