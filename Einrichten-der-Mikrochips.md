@@ -1,11 +1,13 @@
 # Installation der Arduino IDE 2.0
 
-Folgen Sie den Anweisungen für Linux, Windows oder macOS auf der
+Fuer Ihre Privatrechner olgen Sie den Anweisungen für Linux, Windows oder
+macOS auf der
 [Arduino IDE 2 Download-Seite](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/).
 
-Während der Installation auf Windows werden Sie gefragt verschiedene Programme
-in Bezug zum USB-Port zu installieren. Diese Programme sind notwendig, damit
-der Mikrochip von der Arduino IDE erkannt und bearbeitet werden kann.
+Während der Installation auf Windows werden Sie gefragt, ob Sie verschiedene
+Programme in Bezug zum USB-Port installieren moechten. Diese Programme sind
+notwendig, damit der Mikrochip von der Arduino IDE erkannt und bearbeitet
+werden kann.
 
 Auf Linux müssen Sie wahrscheinlich die Datei
 `/etc/udev/rules.d/99-arduino.rules` neu anlegen. Hierfür benötigen Sie für
@@ -13,7 +15,7 @@ gewöhnlich Admin-Rechte. Zum Beispiel können Sie
 
        sudo vim /etc/udev/rules.d/99-arduino.rules
 
-aufrufen und dann in die Datei
+aufrufen und in die Datei wenn nicht vorhanden die Zeile
 
        SUBSYSTEMS=="usb", ATTRS{idVendor}=="2341", GROUP="plugdev", MODE="0666"
 
@@ -41,6 +43,7 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
    Output-Fenster einen Ansatzpunkt zur Fehlerbehebung.
 
 # Beispiel für Ausgangscode
+
 Wenn Sie Code schreiben, implementieren Sie diesen in der `run`-Funktion in
 dem untenstehenden Code. Sie dürfen natürlich gerne in der Funktion `run`
 weitere von Ihnen implementierte Funktionen aufrufen, aber implementieren Sie
