@@ -6,7 +6,7 @@ Achten Sie bitte darauf, diese Fehler zu vermeiden!
   > Wer seinen Chip kaputtmacht, kauft bitte selbständig einen neuen.
 
 Das kostet etwa vier Dollar im Internet, dauert aber leider etwas.
-Das Board heißt meistens "UBS Beetle" und es ist wichtig, dass der Chip wirklich
+Das Board heißt meistens "USB Beetle" und es ist wichtig, dass der Chip wirklich
 der "ATMega32U4" ist.
 Seine Funktion ist vollständig (!) definiert im
 [Datenblatt](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf).
