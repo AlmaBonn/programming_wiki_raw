@@ -9,13 +9,13 @@ starten.  Das Terminal an sich ist ein Programm, das Eingaben (durch die
 Tastatur) und Ausgaben (zum Bildschirm) eines zweiten Programms durch das
 Betriebssystem leitet (und bei manchen Anwendungen auch über das Netzwerk, so
 daß Computer aus der Ferne gesteuert werden können).  In unserem Fall ist das
-zweite Program eine sogenannte "Shell," meistens die `bash`.  Mit dieser
+zweite Programm eine sogenannte "Shell," meistens die `bash`.  Mit dieser
 interagieren wir in der Praxis des Programmierens fast ausschließlich.
 
 Die Shell erwartet Eingaben des Nutzers (also Ihre) über die Tastatur.  Wenn
 man also ein oder mehrere Worte tippt und dann die Entertaste drückt (die große
 mit dem eckigen Pfeil nach links), interpretiert die Shell das erste Wort als
-Programm und die weiteren als Argumente, die diesem Program übergeben werden
+Programm und die weiteren als Argumente, die diesem Programm übergeben werden
 sollen.  Argumente haben oft die spezielle Form `-a` oder `--bcd` und werden
 vom Programm als spezielle Schalter interpretiert.  Jedes Programm macht das
 anders; idealerweise steht die Konvention auf seiner man-Page (s. u.).  Die
@@ -24,12 +24,12 @@ Shell sucht dann das Programm dieses Namens im Dateisystem und führt es aus.
  - Wenn man wissen möchte, wo im Dateisystem die Shell ein bestimmtes
    Programm findet, tippt man z. B. `which python`.
 
- - Ein wichtiges Program ist zum Beispiel `man`.  Es greift auf eine Datenbank
+ - Ein wichtiges Programm ist zum Beispiel `man`.  Es greift auf eine Datenbank
    an Hilfen zu den meisten Programmen zu und zeigt diese an.  Das gesuchte
    Programm ist als Argument anzugeben.  Probieren Sie also einmal `man man`,
    oder `man bash`.  Man verläßt den Hilfeviewer mit der Taste `q`.
 
- - Ein weiteres Program ist `echo`.  Es gibt alle Argumente auf den Bildschirm
+ - Ein weiteres Programm ist `echo`.  Es gibt alle Argumente auf den Bildschirm
    aus, probieren Sie `echo abc`.
 
  - Ein Pager zeigt eine Datei am Bildschirm an und ermöglicht das Scrollen
