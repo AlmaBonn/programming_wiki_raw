@@ -45,6 +45,17 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
    Ist dies nicht der Fall, bietet eine eventuelle Fehlermeldungen im
    Output-Fenster einen Ansatzpunkt zur Fehlerbehebung.
 
+## Verwenden eines eigenen Editors
+
+Der eingebaute Editor in der Arduino-IDE ("Integrated Development Environment":
+Entwicklungsumgebung) funktioniert wie auf Windows ueblich, was zunaechst einmal
+das Einfachste ist.  Verglichen mit den meisten Unix-Editoren fehlen ihm jedoch
+(unserer Meinung nach) viele Features fuer effizientes, professionelles und
+angenehmes Arbeiten.  Eine Alterantive ist zum Beispiel `vim`.
+
+Daher oeffnen Sie die Programmdatei gerne parallel mit Ihrem Lieblings-Editor.
+Wann immer Sie abspeichern, registriert die IDE das und laedt den Quelltext neu.
+
 # Beispiel für Ausgangscode
 
 Wenn Sie Code schreiben, implementieren Sie diesen in der `run`-Funktion in
