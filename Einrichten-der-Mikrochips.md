@@ -19,7 +19,8 @@ aufrufen und in die Datei wenn nicht vorhanden die Zeile
 
        SUBSYSTEMS=="usb", ATTRS{idVendor}=="2341", GROUP="plugdev", MODE="0666"
 
-einfügen.  Sie koennen natuerlich Modifikationen vornehmen, z. B. den Mode auf `0660` setzen, wenn Ihr Nutzer in der `plugdev`-Systemgruppe enthalten ist.
+einfügen.  Sie können natürlich Modifikationen vornehmen, z. B. den Mode auf
+`0660` setzen, wenn Ihr Nutzer in der `plugdev`-Systemgruppe enthalten ist.
 
 Wenn es Probleme mit der seriellen Schnittstelle über den USB-Anschluß gibt,
 kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
@@ -27,8 +28,8 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
 # Erste Schritte nach der Installation
 
 1. Verbinden Sie den Mikrochip über einen USB-Port mit Ihrem Gerät.
-   Er wird in einen USB-A-Port eingesteckt!  Es ist kein Kabel noetig.
-   Falls Ihr Geraet nur USB-C-Ports besitzt, koennen Sie ein
+   Er wird in einen USB-A-Port eingesteckt!  Es ist kein Kabel nötig.
+   Falls Ihr Geraet nur USB-C-Ports besitzt, können Sie ein
    Adapterkabel oder einen USB-Hub zwischenschalten.
 
 2. In der Arduino IDE drücken Sie auf `Select Board`.
@@ -48,13 +49,13 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
 ## Verwenden eines eigenen Editors
 
 Der eingebaute Editor in der Arduino-IDE ("Integrated Development Environment":
-Entwicklungsumgebung) funktioniert wie auf Windows ueblich, was zunaechst einmal
+Entwicklungsumgebung) funktioniert wie auf Windows üblich, was zunächst einmal
 das Einfachste ist.  Verglichen mit den meisten Unix-Editoren fehlen ihm jedoch
-(unserer Meinung nach) viele Features fuer effizientes, professionelles und
+(unserer Meinung nach) viele Features für effizientes, professionelles und
 angenehmes Arbeiten.  Eine Alterantive ist zum Beispiel `vim`.
 
-Daher oeffnen Sie die Programmdatei gerne parallel mit Ihrem Lieblings-Editor.
-Wann immer Sie abspeichern, registriert die IDE das und laedt den Quelltext neu.
+Daher öffnen Sie die Programmdatei gerne parallel mit Ihrem Lieblings-Editor.
+Wann immer Sie abspeichern, registriert die IDE das und lädt den Quelltext neu.
 
 # Beispiel für Ausgangscode
 
