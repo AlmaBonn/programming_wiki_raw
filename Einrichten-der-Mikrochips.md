@@ -52,7 +52,8 @@ Der eingebaute Editor in der Arduino-IDE ("Integrated Development Environment":
 Entwicklungsumgebung) funktioniert wie auf Windows üblich, was zunächst einmal
 das Einfachste ist.  Verglichen mit den meisten Unix-Editoren fehlen ihm jedoch
 (unserer Meinung nach) viele Features für effizientes, professionelles und
-angenehmes Arbeiten.  Eine Alterantive ist zum Beispiel `vim`.
+angenehmes Arbeiten.  Eine Alterantive ist zum Beispiel `vim` (siehe auch
+[hier](Grundlagen-des-Linux-Terminals#erste-schritte)).
 
 Daher öffnen Sie die Programmdatei gerne parallel mit Ihrem Lieblings-Editor.
 Wann immer Sie abspeichern, registriert die IDE das und lädt den Quelltext neu.
