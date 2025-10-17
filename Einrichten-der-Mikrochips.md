@@ -27,6 +27,9 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
 # Erste Schritte nach der Installation
 
 1. Verbinden Sie den Mikrochip über einen USB-Port mit Ihrem Gerät.
+   Er wird in einen USB-A-Port eingesteckt!  Es ist kein Kabel noetig.
+   Falls Ihr Geraet nur USB-C-Ports besitzt, koennen Sie ein
+   Adapterkabel oder einen USB-Hub zwischenschalten.
 
 2. In der Arduino IDE drücken Sie auf `Select Board`.
    Dort sollte nun `Arduino Leonardo` zur Auswahl stehen.
@@ -51,7 +54,6 @@ unter keinen Umständen eine eigene `main`-Funktion!
 > [!CAUTION]
 > Bitte beachten Sie auch unsere Hinweise auf dieser
 > [Seite](Wichtige-Hinweise-zum-Mikrochip).
-
 
 ```c
 void run () {
@@ -83,6 +85,7 @@ Um die in C übliche `printf`-Funktion zu verwenden können Sie dieser
 
 # Probleme und Lösungen
 Probleme beim Einrichten der Mikrochips und der IDE sowie passende Lösungen
-sammeln wir in der folgenden Liste.
+sammeln wir in der folgenden Liste.  Bitte melden Sie uns alles, was Sie
+finden!
 
 -
