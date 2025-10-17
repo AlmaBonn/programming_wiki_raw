@@ -1,6 +1,6 @@
 # Installation der Arduino IDE 2.0
 
-Fuer Ihre Privatrechner olgen Sie den Anweisungen für Linux, Windows oder
+Fuer Ihre Privatrechner folgen Sie den Anweisungen für Linux, Windows oder
 macOS auf der
 [Arduino IDE 2 Download-Seite](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/).
 
@@ -19,7 +19,7 @@ aufrufen und in die Datei wenn nicht vorhanden die Zeile
 
        SUBSYSTEMS=="usb", ATTRS{idVendor}=="2341", GROUP="plugdev", MODE="0666"
 
-einfügen.
+einfügen.  Sie koennen natuerlich Modifikationen vornehmen, z. B. den Mode auf `0660` setzen, wenn Ihr Nutzer in der `plugdev`-Systemgruppe enthalten ist.
 
 Wenn es Probleme mit der seriellen Schnittstelle über den USB-Anschluß gibt,
 kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
