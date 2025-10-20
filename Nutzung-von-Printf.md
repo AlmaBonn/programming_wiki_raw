@@ -76,7 +76,7 @@ müssen, um die Programmausgabe sehen zu können (siehe auch
 
 Die Standardfunktion `Serial.write` akzeptiert Strings (Zeichenketten),
 die sie in das Konsolenfenster der Arduino-Umgebung schickt.
-Wir koennen eine Variante von `printf` nutzen, die diesen String
+Wir können eine Variante von `printf` nutzen, die diesen String
 beschreibt, bevor wir ihn an `Serial.write` weitergeben.
 
 ```c
@@ -98,6 +98,9 @@ void run () {
 
 Hierzu einige Bemerkungen:
 
+ - Damit der Code kompiliert, muss er mit dem
+   [Beispiel für Ausgangscode](Einrichten-der-Mikrochips#beispiel-für-ausgangscode)
+   kombiniert werden.
  - Die `sprintf` Funktion kopiert kommentarlos auch mehr Zeichen, als
    im Puffer reserviert sind.  Dies kann das Programm (und auch
    den ganzen Chip) abstuerzen lassen.   Daher bitte *nur* die abgesicherte
