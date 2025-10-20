@@ -34,7 +34,9 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
 
 2. In der Arduino IDE drücken Sie auf `Select Board`.
    Dort sollte nun `Arduino Leonardo` zur Auswahl stehen.
-   Wählen Sie diese Option aus.
+   Je nach Chip-Charge und Betriebssytem kann auch `Arduino Micro` angezeigt
+   werden.
+   Wählen Sie die Option entsprechend aus.
 
 3. Öffnen Sie nun
    `File > Examples > 01.Basics > Blink`
