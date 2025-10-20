@@ -61,12 +61,16 @@ Dort fügen wir bei `compiler.c.elf.flags` vor den bereits vorhandenen Optionen
 
 ein und speichern die Datei.
 
-Zur Erklaerung:  Die `-W`-Option weist den Compiler an, ihr Argument intern
+Zur Erklärung:  Die `-W`-Option weist den Compiler an, ihr Argument intern
 an den Linker weiterzugeben.  Der Linker sieht also `-u vfprintf` und
-verarbeitet danach die Programmlibrary `printf_flt`, die den uebersetzten
-und float-faehigen Code der Funktion `vfprintf` enthaelt.
+verarbeitet danach die Programmlibrary `printf_flt`, die den übersetzten
+und float-fähigen Code der Funktion `vfprintf` enthaelt.
 
 # Beispiel mit `printf` and friends
+
+Bitte beachten Sie, dass Sie den Serial Monitor in der Arduino IDE geöffnet haben
+müssen, um die Programmausgabe sehen zu können (siehe auch
+[hier](Einrichten-der-Mikrochips#erste-schritte-nach-der-installation)).
 
 ## Ein einfaches Beispiel mit `snprintf`
 

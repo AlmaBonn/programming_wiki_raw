@@ -46,6 +46,12 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
    Ist dies nicht der Fall, bietet eine eventuelle Fehlermeldungen im
    Output-Fenster einen Ansatzpunkt zur Fehlerbehebung.
 
+5. Drücken Sie nun auf Serial Monitor. Im unteren Fenster sollte sich nun ein
+   weiteres Fenster mit der Überschrift Serial Monitor geöffnet haben.
+   In diesem Fenster können Sie dann Ausgaben von Ihren Programmen sehen,
+   falls Ihr Programm etwas ausgibt (siehe z. B.
+   [hier](Nutzung-von-Printf#ein-trickreicheres-beispiel-mit-printf)).
+
 ## Verwenden eines eigenen Editors
 
 Der eingebaute Editor in der Arduino-IDE ("Integrated Development Environment":
