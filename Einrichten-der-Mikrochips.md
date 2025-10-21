@@ -101,8 +101,8 @@ void loop () {
 }
 ```
 
-Um die in C übliche `printf`-Funktion zu verwenden können Sie dieser
-[Anleitung](Nutzung-von-Printf) folgen.
+Um die in C übliche `printf`-Funktion auch für `float` und `double` zu
+verwenden, können Sie dieser [Anleitung](Nutzung-von-Printf) folgen.
 
 # Probleme und Lösungen
 Probleme beim Einrichten der Mikrochips und der IDE sowie passende Lösungen
