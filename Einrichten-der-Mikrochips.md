@@ -101,8 +101,10 @@ void loop () {
 }
 ```
 
-Um die in C übliche `printf`-Funktion auch für `float` und `double` zu
+Um die in C übliche `printf`-Funktion auch für `float` und `double` Variablen zu
 verwenden, können Sie dieser [Anleitung](Nutzung-von-Printf) folgen.
+Wenn Sie also keine `float` oder `double` verwenden, können Sie auch mit
+`Serial.print`/`Serial.println` wie im obigen Beispiel arbeiten.
 
 # Probleme und Lösungen
 Probleme beim Einrichten der Mikrochips und der IDE sowie passende Lösungen
