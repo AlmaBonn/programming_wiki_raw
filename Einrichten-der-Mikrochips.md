@@ -42,8 +42,8 @@ kann es helfen, das Linux-Paket `modemmanager` zu deinstallieren.
    `File > Examples > 01.Basics > Blink`
    für ein Testprogramm.
 
-4. Drücken Sie auf `Upload`, um das Programm zu kompilieren und auf den Arduino
-   zu laden.
+4. Drücken Sie auf `Upload` (Pfeil nach rechts), um das Programm zu kompilieren
+   und auf den Arduino zu laden.
    Die Lampe an dem Mikrochip sollte nun in 1-Sekunden-Abständen blinken.
    Ist dies nicht der Fall, bietet eine eventuelle Fehlermeldungen im
    Output-Fenster einen Ansatzpunkt zur Fehlerbehebung.
