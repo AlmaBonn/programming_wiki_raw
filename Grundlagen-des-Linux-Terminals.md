@@ -275,6 +275,10 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
   - Um im Terminal langes hochscrollen zu vermeiden, können Sie auch mit der
     Tastenkombination `Shift + PageUp` sukzessive durch den Terminalverlauf
     durchgehen.
+    Ähnlich praktische Befehle gibt es für den Texteditor `vim`.
+    Mit `zz` zentriert man das Fenster um die aktuelle Zeile.
+    Analog sorgen `zb`/`zt` dafür, dass das Fenster so verschoben wird, dass die
+    aktuelle Zeile am unteren/oberen Ende des Fensters gezeigt wird.
 
   - Mit der Maus kann man beliebigen Text markieren und direkt am Ort des
     Mauszeigers mit der Mitteltaste pasten.  Ein Umständliches `Ctrl-V` etc.
