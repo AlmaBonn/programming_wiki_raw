@@ -250,7 +250,7 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
    Hierfür können Sie sich `man find` oder auch diese
    [deutsche Erklärung](https://wiki.ubuntuusers.de/find/#Aufruf) anschauen.
 
-## Tipps und Tricks
+## Tips und Tricks
 
  - Um lange Befehle nicht mehrmals eingeben zu müssen, kann man mit den
    Pfeiltasten auch die zuletzt genutzten Befehle durchsuchen (Pfeiltaste nach
@@ -288,20 +288,22 @@ der Sektion *Wichtige Tipps für den Anfang* in dieser
 
 ## Die Manual Page
 
- Wir schauen uns nun die manual page von `ls` etwas genauer an, um an einem
- Beispiel zu sehen wie wir passende Optionen finden können und gegebenen
- Optionen verstehen können.
+ Wir schauen uns nun die manual page des Programms `ls` etwas genauer an, um an einem
+ Beispiel zu sehen, wie wir passende Optionen finden und verstehen können.
 
- Rufen Sie erneut die manual page von `ls` auf. Das erste Ziel ist es nun
- Optionen zu finden, die eine umgekehrte Sortierung nach Zeitstempel
- (Änderungsdatum) bietet.
+ Rufen Sie `man ls` auf. Das erste Ziel ist es nun, Programmoptionen zu finden,
+ die eine umgekehrte Sortierung nach Zeitstempel (Änderungsdatum) bieten.
 
- Nutzen Sie hierfür die Möglichkeit in der manual page zu suchen in dem Sie
+ Nutzen Sie hierfür die Möglichkeit, in der manual page nach der Zeichenfolge
+ `by time` zu suchen, indem Sie
 
-      /by time
+      /time
 
-eingeben und mit Enter bestätigen. Hierbei hat `/` die Funktion in den
-Suchmodus zu kommen. Wenn Sie die Option für das Sortieren nach den Zeitstempeln
+eingeben und mit Enter bestätigen. Hierbei hat `/` die Funktion, in den
+Suchmodus zu kommen.  Die folgenden/verherigen Suchtreffer springen Sie mit den Tasten `n`
+und `N` an.  Sie können auch direkt nach `/by time` suchen. 
+
+Wenn Sie die Option für das Sortieren nach den Zeitstempeln
 gefunden haben, können Sie nun per
 
      /reverse
@@ -311,5 +313,5 @@ Probieren Sie den gefundenen Befehl einmal aus. In welcher Reihenfolge zeigt
 `ls` die Resultate ohne die übergebenen Optionen an? Sie können für diese Frage
 auch wieder auf `man ls` nachschauen.
 
-Mithilfe der manual page von `ls` können Sie nun auch herausfinden was jeweils
+Mithilfe der manual page von `ls` können Sie nun auch herausfinden, was jeweils
 die einzelnen Optionen in dem oben erwähnten `ls -l -a -F` bedeuten.
