@@ -60,6 +60,10 @@ man ein Arduino-Board als Programmer nutzt, sucht man sich die richtigen
 sechs Positionen in seinen Buchsenleisten zusammen.  Die Verdrahtung ist
 logisch 1:1 (es werden keine Leitungen überkreuzt).
 
+![Board anfangs](/pics/chip_board.jpg)
+![Buchsenleiste](/pics/buchsenleiste.jpg)
+![Board geloetet](/pics/chip_geloetet.jpg)
+
 Das genutzte Protokoll ist
 [SPI](https://de.wikipedia.org/wiki/Serial_Peripheral_Interface),
 wobei die *SCK*-Leitung das Taktsignal vermittelt, *MO* steht für *MOSI*, also
