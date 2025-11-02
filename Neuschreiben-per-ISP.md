@@ -43,9 +43,9 @@ Am Schluss muss dieser letzte nur wieder USB-programmierbar gemacht werden.
 
 Den elektrischen Zugriff konstruieren wir beispielsweise wie folgt.
 
-![Board anfangs](/pics/chip_board.jpg)
-![Buchsenleiste](/pics/buchsenleiste.jpg)
-![Board geloetet](/pics/chip_geloetet.jpg)
+![Board anfangs](pics/chip_board.jpg)
+![Buchsenleiste](pics/buchsenleiste.jpg)
+![Board geloetet](pics/chip_geloetet.jpg)
 
 ## Flashen eines Chips per ISP
 
@@ -77,9 +77,9 @@ Bei letzterem ist eine Besonderheit, dass der Reset-Ausgang des Programmers
 *nicht* dem eigenen Reset-Eingang entspricht, sondern nach dem Reset-Eingang
 des Ziel-Chips benannt ist, mit dem er verbunden wird.
 
-![Programmer](/pics/ISP_Programmer.jpg)
-![Multikabel](/pics/multikabel.jpg)
-![Verbindung](/pics/chip_connect.jpg)
+![Programmer](pics/ISP_Programmer.jpg)
+![Multikabel](pics/multikabel.jpg)
+![Verbindung](pics/chip_connect.jpg)
 
 Nun klickt man in der Arduino-Umgebung auf *Burn Bootloader*.  Dies schreibt
 über ISP eine funktionierende USB-Logik und ein Blink-Programm in den Chip.
