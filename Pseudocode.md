@@ -1,5 +1,5 @@
 Dieser Beitrag zu Pseudocode orientiert sich an folgendem Buch:
-    `Hougardy, Stefan, und Jens Vygen. Algorithmische Mathematik. 2. Aufl. 2018. Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. Web.`
+    `Hougardy, Stefan, und Jens Vygen. Algorithmische Mathematik. 2. Aufl. 2018. Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. Web.` 
 
 # Nutzen von Pseudocode
 Wenn ein Algorithmus in einer theoretischen Überlegung beschrieben werden soll, in der die direkte praktische Umsetzung (durch Implementierung in einer Programmiersprache, wie
@@ -60,7 +60,31 @@ output erg
 ```
 
 # Beispiel
-Angenommen wir wollen einen Algorithmus beschreiben, der die Parität einer gegebenen natürlichen Zahl bestimmt, dh. ob sie gerade oder ungerade ist. (Dies ist natürlich nur eine sehr simple Aufgabe, die lediglich die Formulierung von Pseudocode darstellen soll)
+Angenommen wir wollen einen Algorithmus beschreiben, der die Parität einer gegebenen natürlichen Zahl bestimmt, dh. ob sie gerade oder ungerade ist. (Dies ist natürlich nur eine sehr simple Aufgabe, die lediglich die Formulierung von Pseudocode darstellen soll).
 Mit Pseudocode könnten wir folgendes formulieren:
 
+![](pics/Pseudocode_example.png)
 
+Den beschriebenen Algorithmus könnte man nun in C implementieren: 
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    int i;
+    scanf("%d", &i);
+    if(i % 2 == 0){
+        printf("g \n");
+    }else{
+        printf("u \n");
+    }
+
+    return EXIT_SUCCESS;
+}
+```
+Man beachte hierbei auch die Grenzen der Implementierung. Die Formulierung im Pseudocode beschreibt das Vorgehen für eine beliebige natürliche Zahl, die mit einem integer aber nicht immer dargestellt werden kann.
+
+
+# Darstellung von Pseudocode mit LaTeX
+Für diejenigen, die ihre Aufschriebe mithilfe des Textsatzsystems LaTeX erstellen, kann es sich lohnen packages, wie `algorithm` oder `algpseudocode` nachzuschlagen. Diese erleichtern die Darstellung von Algorithmen im besprochenen Format erheblich.
