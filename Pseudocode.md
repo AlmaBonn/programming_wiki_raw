@@ -1,6 +1,9 @@
 Dieser Beitrag zu Pseudocode orientiert sich an folgendem Buch:
     `Hougardy, Stefan, und Jens Vygen. Algorithmische Mathematik. 2. Aufl. 2018. Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. Web.` 
 
+Diese Seite steht aber für sich selbst. Wir sind inhaltlich sehr flexibel
+solange korrekte Berechnungen durchgeführt werden.
+
 # Nutzen von Pseudocode
 Wenn ein Algorithmus in einer theoretischen Überlegung beschrieben werden soll, in der die direkte praktische Umsetzung (durch Implementierung in einer Programmiersprache, wie
 C) weniger relevant ist, als bspw. Überlegungen zur Funktionsweise oder Laufzeit, so kann sich eine Formulierung mit Pseudocode anbieten. 
@@ -40,6 +43,8 @@ i <-- 5
 Hier bietet es sich an ähnliche Schlüsselwörter, wie in C zu verwenden. Dazu gehören z.B. `while`, `for`, `if` und `else`. 
 Falls klar ist, welche Anweisungen zu welcher Bedingung oder Schleife gehören, können geschweifte Klammern auch weggelassen werden oder mithilfe von Einrückungen 
 bzw. Formulierungen, wie `if ... then ... endif` dargestellt werden.
+Auch deutsche Begriffe wie zum Beispiel `WENN ... DANN` sind vollkommen in
+Ordnung.
  
 ## Ausgaben
 Spezifische Aufrufe von Funktionen zur Ausgabe, wie z.B.
