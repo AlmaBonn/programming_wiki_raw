@@ -6,6 +6,7 @@ Wir sind inhaltlich sehr flexibel, solange korrekte Berechnungen
 durchgeführt werden.
 Wir akzeptieren auch die Sprache C selbst oder eine Mischung.
 Nur die C-Operatoren sollen wie definiert eingesetzt werden.
+Fuer die Grundrechenarten entsprechen Sie '+', '-', '*', '/'.
 
 # Nutzen von Pseudocode
 Wenn ein Algorithmus in einer theoretischen Überlegung beschrieben werden soll, in der die direkte praktische Umsetzung (durch Implementierung in einer Programmiersprache, wie
