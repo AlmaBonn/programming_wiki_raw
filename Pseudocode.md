@@ -1,8 +1,11 @@
 Dieser Beitrag zu Pseudocode orientiert sich an folgendem Buch:
     `Hougardy, Stefan, und Jens Vygen. Algorithmische Mathematik. 2. Aufl. 2018. Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. Web.`
 
-Diese Seite steht aber für sich selbst. Wir sind inhaltlich sehr flexibel
-solange korrekte Berechnungen durchgeführt werden.
+Diese Seite steht aber für sich selbst.
+Wir sind inhaltlich sehr flexibel, solange korrekte Berechnungen
+durchgeführt werden.
+Wir akzeptieren auch die Sprache C selbst oder eine Mischung.
+Nur die C-Operatoren sollen wie definiert eingesetzt werden.
 
 # Nutzen von Pseudocode
 Wenn ein Algorithmus in einer theoretischen Überlegung beschrieben werden soll, in der die direkte praktische Umsetzung (durch Implementierung in einer Programmiersprache, wie
