@@ -1,6 +1,6 @@
 
 Sollten Sie die mitgelieferte main-Funktion oder die USB-Logik Ihres Chips
-überschrieben haben, ist nicht aller Tage Abend.
+überschrieben haben, ist noch nicht aller Tage Abend.
 Der Chip reagiert zwar nicht mehr wie erwartet am USB-Anschluß, ist aber
 noch voll funktionsfähig.  Wir müssen lediglich wieder ein Programm mit
 funktionierender USB-Ansteuerung hineinschreiben.
