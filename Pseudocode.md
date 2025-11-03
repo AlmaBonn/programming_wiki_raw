@@ -80,16 +80,15 @@ int main(void){
     int i;
     scanf("%d", &i);
     if(i % 2 == 0){
-        printf("g \n");
+        printf("g\n");
     }else{
-        printf("u \n");
+        printf("u\n");
     }
 
     return EXIT_SUCCESS;
 }
 ```
-Man beachte hierbei auch die Grenzen der Implementierung. Die Formulierung im Pseudocode beschreibt das Vorgehen für eine beliebige natürliche Zahl, die mit einem integer aber nicht immer dargestellt werden kann.
-
+Man beachte hierbei auch die Grenzen der Implementierung. Die Formulierung im Pseudocode beschreibt das Vorgehen für eine beliebige natürliche Zahl, die mit einem C-int aber nicht immer dargestellt werden kann.
 
 # Darstellung von Pseudocode mit LaTeX
 Für diejenigen, die ihre Aufschriebe mithilfe des Textsatzsystems LaTeX erstellen, kann es sich lohnen packages, wie `algorithm` oder `algpseudocode` nachzuschlagen. Diese erleichtern die Darstellung von Algorithmen im besprochenen Format erheblich.
