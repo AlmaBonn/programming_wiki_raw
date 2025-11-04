@@ -17,7 +17,7 @@ einer Grafik aus Dateien mit Meßwerten.
 ## Problematik in der Praxis
 
 Betrachten wir das Kommando zum Übersetzen (Compilieren) des
-[ohnechip-Progamms](https://github.com/AlmaBonn/programming/tree/master/beispiele/ohnechip/ohnechip.c):
+[ohnechip-Progamms](https://github.com/AlmaBonn/programming/blob/master/beispiele/ohnechip/ohnechip.c):
 
     gcc -Wall -Wextra -o ohnechip ohnechip.c
 
@@ -51,7 +51,7 @@ Das Makefile ist Teil der Entwicklungsarbeit und gehört sozusagen zum
 restlichen Code, wird also idealerweise mit gebackupt, weitergegeben etc.
 
 Ein einfaches
-[Makefile für das ohnechip-Programm](https://github.com/AlmaBonn/programming/tree/master/beispiele/ohnechip/Makefile)
+[Makefile für das ohnechip-Programm](https://github.com/AlmaBonn/programming/blob/master/beispiele/ohnechip/Makefile)
 kann so aussehen:
 
     ohnechip: ohnechip.c
