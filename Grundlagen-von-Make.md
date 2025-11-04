@@ -32,7 +32,7 @@ Bei größeren Projekten, die aus mehreren Dateien bestehen, sind zum
 ## Automatisierung mit Make
 
 Das `make`-Programm liest eine Beschreibungsdatei, das sogenannte
-`Makefile`, eine Datei genau diess Namens, die nach einem Satz von Regeln
+`Makefile`, eine Datei genau dieses Namens, die nach einem Satz von Regeln
 vom Nutzer geschrieben wird.
 
 Man kann Variablen definieren, zum Beispiel für den Namen der
@@ -43,9 +43,19 @@ nötig ist, um dieses Ziel zu erzeugen.
 Make liest bei seinem Aufruf durch `make` auf der Kommandozeile das
 `Makefile` und untersucht die Modifikationszeiten aller Dateien.
 Es führt dann genau die Aufrufe in der richtigen Reihenfolge aus, die
-benötigt sind, um alle definierten Zieldateien zu aktualisieren.
+benötigt werden, um alle definierten Zieldateien zu aktualisieren.
 Wenn die Quelldateien in der Zwischenzeit nicht geändert wurden,
 passiert also (sinnvollerweise) gar nichts.
 
 Das Makefile ist Teil der Entwicklungsarbeit und gehört sozusagen zum
-restlichen Code dazu, wird mit gebackupt und weitergegeben etc.
+restlichen Code, wird also idealerweise mit gebackupt, weitergegeben etc.
+
+Ein einfaches [Makefile für das ohnechip-Programm](/beispiele/ohnechip/Makefile)
+kann so aussehen:
+
+    ohnechip: ohnechip.c
+    <TAB>gcc -Wall -Wextra $< -o $@
+
+Hier muß statt `<TAB>` tatsächlich ein TAB-Zeichen im Makefile stehen.
+Nun kann man einfach `make` tippen, und wenn das ausführbare Programm
+älter ist als seine Quelldatei, wird es neu compiliert.
