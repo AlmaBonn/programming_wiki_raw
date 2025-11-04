@@ -17,7 +17,7 @@ einer Grafik aus Dateien mit Meßwerten.
 ## Problematik in der Praxis
 
 Betrachten wir das Kommando zum Übersetzen (Compilieren) des
-[ohnechip-Progamms](/beispiele/ohnechip/ohnechip.c):
+[ohnechip-Progamms](../beispiele/ohnechip/ohnechip.c):
 
     gcc -Wall -Wextra -o ohnechip ohnechip.c
 
@@ -33,7 +33,7 @@ Bei größeren Projekten, die aus mehreren Dateien bestehen, sind zum
 
 Das `make`-Programm liest eine Beschreibungsdatei, das sogenannte
 `Makefile`, eine Datei genau dieses Namens, die nach einem Satz von Regeln
-vom Nutzer geschrieben wird.
+von Ihnen geschrieben wird.
 
 Man kann Variablen definieren, zum Beispiel für den Namen der
 ausführbaren Zieldatei, und Abhängigkeiten, also von welchen
@@ -50,12 +50,18 @@ passiert also (sinnvollerweise) gar nichts.
 Das Makefile ist Teil der Entwicklungsarbeit und gehört sozusagen zum
 restlichen Code, wird also idealerweise mit gebackupt, weitergegeben etc.
 
-Ein einfaches [Makefile für das ohnechip-Programm](/beispiele/ohnechip/Makefile)
+Ein einfaches [Makefile für das ohnechip-Programm](..//beispiele/ohnechip/Makefile)
 kann so aussehen:
 
     ohnechip: ohnechip.c
     <TAB>gcc -Wall -Wextra $< -o $@
 
 Hier muß statt `<TAB>` tatsächlich ein TAB-Zeichen im Makefile stehen.
+Wir haben in der obigen Regel zwei der internen Variablen abgerufen:
+
+ - `$@` setzt das Ziel ein.  Das Symbol ähnelt optisch einer Zielscheibe!
+ - `$<` setzt die erste Quelle ein.  Das Symbol zeigt sozusagen darauf.
+ - `$^` setzt alle Quellen ein.  Eselsbrücke ist "alles von dort oben."
+
 Nun kann man einfach `make` tippen, und wenn das ausführbare Programm
 älter ist als seine Quelldatei, wird es neu compiliert.
