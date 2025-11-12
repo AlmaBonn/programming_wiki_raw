@@ -85,7 +85,7 @@ void run () {
 /* Der Code in der setup-Funktion wird genau einmal ausgeführt. */
 void setup () {
   /* Sicherheitsmaßnahme, siehe
-     https://github.com/AlmaBonn/programming/wiki/Wichtige-Hinweise-zum-Mikrochip#pro-tips#delay */
+     https://github.com/AlmaBonn/programming/wiki/Wichtige-Hinweise-zum-Mikrochip#delay */
   delay (3000);
 
   /* Initialisiere Konsole mit der Datenrate von 9600 Bits pro Sekunde. */
