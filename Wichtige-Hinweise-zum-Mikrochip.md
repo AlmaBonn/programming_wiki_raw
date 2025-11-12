@@ -94,8 +94,29 @@ for (Mi = 0; Mi <= N; ++Mi) {
 In diesem Fall bekommt man den belegten Speicher in der Console der
 Arduino-Umgebung beim Compilieren angezeigt.
 
-## Pro-Tip: Hardware-Reflash der Chips
+## Pro-Tips
+### Delay
+Als Sicherheitsmaßnahme kann man die `Setup`-Funktion mit einem Aufruf von
+```x
+delay(3000);
+```
+beginnen, so zum Beispiel umgesetzt in unserem
+[Beispielprogramm](Einrichten-der-Mikrochips#beispiel-für-ausgangscode).
+Dadurch pausiert das Programm zunächst für 3000 Millisekunden (also 3 Sekunden),
+bevor der restliche Code ausgeführt wird.
+Falls man fehlerhaften Code hochgeladen haben sollte, hat man nun
+jedes Mal wenn der Chip neu in den USB-Port eingesteckt wird 3 Sekunden Zeit,
+um anderen, fehlerfreien Code hochzuladen. Das kann zum Beispiel einfach das
+Beispiel unter `File > Examples > 01.Basics > Blink` sein.
 
-Es gibt natürlich einen Weg, scheintot geflashte Chips wiederzubeleben, wenn
-man keine Angst vor Hardware hat.  Siehe hierzu unsere Bastelanleitung zum
+Diese Sicherheitsmaßnahme deckt viele aber nicht alle Problemfälle ab.
+Zum Beispiel das oben beschriebene
+[Überschreiben der main-Funktion](#überschreiben-der-main-funktion)
+sorgt schon beim Hochladen der kompilierten Datei für Probleme,
+sodass der Delay in diesem Fall nicht mehr helfen kann.
+
+### Hardware-Reflash der Chips
+Es gibt natürlich auch einen Weg, scheintot geflashte Chips
+wiederzubeleben, wenn man keine Angst vor Hardware hat.
+Siehe hierzu unsere Bastelanleitung zum
 [Neuprogrammieren der Chips per ISP](Neuschreiben-per-ISP).
