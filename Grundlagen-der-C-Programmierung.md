@@ -1,3 +1,11 @@
+> [!NOTE]
+> Diese Wiki-Seite dient nicht dazu das Programmieren beizubringen sondern
+> gibt einen allgemeinen Über- und Einblick in das Programmieren.
+> Programmieren lernen Sie in der Vorlesung, durch die Programmieraufgaben
+> zur Vorlesung, in den Programmiertutorien und durch die kommentierten
+> Beispiele in dem
+> [Repository zur Vorlesung](https://github.com/AlmaBonn/programming).
+
 Hier geht es nicht nur um die Sprache C sondern auch das Programmieren an sich.
 
 Es gibt eine riesige Anzahl an Büchern und sonstigen Dokumenten zum
